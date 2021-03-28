@@ -1,1 +1,38 @@
-h1 {color: red; font-weight: bold; text-align: center}
+html, body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F2F2F2
+}
+
+header, main {
+    background-color: #FFFFFF;
+    margin: 0 30px
+}
+
+nav {
+    padding: 35px 50px 0 50px
+}
+
+#menu {display: inline; float: right}
+
+nav a {
+    color: #000000;
+    padding: 37px 20px;
+    margin-left: 10px;
+    font-size: 14px
+}
+nav a:hover {
+    color: #0065FC;
+    text-decoration: none;
+    border-top : 2px #0065FC solid
+}
+
+#Sign-up {
+    font-weight: bold;
+    color: #0065FC
+}
+
+h1 {/*font-weight: bold;*/ color: red}
+
+h2 {/*font-weight: bold;*/ color: green}
+
+p {color: blue}
