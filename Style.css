@@ -1,38 +1,95 @@
+/*Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» —*/
+
 html, body {
     font-family: 'Raleway', sans-serif;
-    background-color: #F2F2F2
+    background-color: #FFFFFF
 }
 
 header, main {
-    background-color: #FFFFFF;
-    margin: 0 30px
+    margin: 0 45px
 }
 
 nav {
-    padding: 35px 50px 0 50px
+    padding-top: 30px
 }
 
 #menu {display: inline; float: right}
 
 nav a {
     color: #000000;
+    text-decoration: none;
     padding: 37px 20px;
     margin-left: 10px;
     font-size: 14px
 }
 nav a:hover {
     color: #0065FC;
-    text-decoration: none;
-    border-top : 2px #0065FC solid
+    border-top: 2px #0065FC solid
 }
 
-#Sign-up {
+#sign-up {
     font-weight: bold;
     color: #0065FC
 }
 
-h1 {/*font-weight: bold;*/ color: red}
+#recherche {
+    padding-top: 15px
+}
+
+h1 {font-weight: bold; font-size: 19px}
+
+#search-logo {
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-radius: 15px 0 0 15px
+}
+
+input {
+    padding: 0 15px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#search-submit {
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    text-align: center;
+    color: white
+}
+
+#filtre {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 25px
+}
+
+.filtres {
+    padding: 12px 15px 12px 0;
+    border: 2px #F2F2F2 solid;
+    border-radius: 50px;
+    margin-left: 20px
+}
+.filtres:hover {
+    background-color: #0065FC;
+    color: white
+}
+
+.blue {
+    color: #0065FC;
+    background-color: #DEEBFF;
+    padding: 15px;
+    border-radius: 50px
+}
+
+.texte-filtre {
+    padding-left: 15px;
+}
 
 h2 {/*font-weight: bold;*/ color: green}
 
-p {color: blue}
+p {font-size: 14px}
+
+footer {
+    background-color: #F2F2F2
+}

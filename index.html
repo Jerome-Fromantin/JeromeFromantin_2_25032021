@@ -7,10 +7,9 @@
         <meta name="keywords" content="OpenClassrooms, intégration, maquette, HTML, CSS, responsive, BootStrap">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="Jérôme Fromantin">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="Style.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
         <!-- On peut avoir d'autres méta-données ici.
         <link rel="icon" type="image/png" href="Images/Favicon.png">
         -->
@@ -20,7 +19,6 @@
         <!--
         Respecter les maquettes desktop et mobile et prévoir pour tablettes.
         Choisir les formats d'images adaptés.
-        Icônes sur Font Awesome (https://fontawesome.com/) à intégrer en HTML ou CSS.
         Utiliser Flexbox, voir Flexbox Froggy.
         Couleurs : bleu (#0065FC), bleu clair (#DEEBFF), gris (#F2F2F2).
         En fin de chaque journée, vérifier le code avec le validateur W3C.
@@ -32,16 +30,28 @@
                 <div id="menu">
                     <a href="#heberg">Hébergements</a>
                     <a href="#activ">Activités</a>
-                    <a href="Signup.html" id="Sign-up">S'inscrire</a>
+                    <a href="Signup.html" id="sign-up">S'inscrire</a>
                 </div>
             </nav>
         </header>
         <main>
-            <section>
+            <section id="recherche">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <p>Champ de recherche avec bouton</p> <!-- Champ de saisie. Bouton non fonctionnel. -->
-                <p>Filtres avec 4 boutons</p> <!-- Boutons non fonctionnels mais devant changer avec hover. -->
+                <!-- Ci-dessous, champ de saisie de la ville. Le bouton n'est pas fonctionnel. -->
+                <!-- <form method="post" action="#"> -->
+                <div>
+                    <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" size=17 id="search-text"><input type="submit" id="search-submit" value="Rechercher">
+                </div>
+                <!-- </form> -->
+                <!-- Ci-dessous, les différents filtres applicables. Ils ne sont pas fonctionnels mais ils
+                changent d'apparence au survol. -->
+                <p id="filtre">Filtres
+                    <span class="filtres"><i class="fas fa-money-bill-wave blue"></i><span class="texte-filtre">Économique</span></span>
+                    <span class="filtres"><i class="fas fa-child blue"></i><span class="texte-filtre">Familial</span></span>
+                    <span class="filtres"><i class="fas fa-heart blue"></i><span class="texte-filtre">Romantique</span></span>
+                    <span class="filtres"><i class="fas fa-dog blue"></i><span class="texte-filtre">Animaux autorisés</span></span>
+                </p>
             </section>
             <section id="heberg">
                 <p>img info - Plus de 500 logements sont disponibles dans cette ville</p>
@@ -49,7 +59,7 @@
                 <p>3 photos</p> <!-- Chaque carte doit être cliquable dans son intégralité. -->
                 <p>3 photos</p> <!-- Les liens sont vides. -->
                 <p>Afficher plus</p>
-                <h2>Les plus populaires</h2>
+                <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
                 <p>1 photo</p>
                 <p>1 photo</p>
                 <p>1 photo</p>
@@ -62,6 +72,6 @@
         <footer>
             <p>Footer avec "A propos", "Nos hébergements", "Assistance"</p>
         </footer>
-        <div style="height: 1600px"></div>
+        <div style="height: 1000px; background-color: #F2F2F2"></div>
     </body>
 </html>
