@@ -1,19 +1,19 @@
 /*Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» —*/
 
 html, body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #FFFFFF
+    font-family: 'Raleway', sans-serif
 }
 
 header, main {
-    margin: 0 45px
+    padding: 0 45px;
+    background-color: #FFFFFF
 }
 
 nav {
-    padding-top: 30px
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between
 }
-
-#menu {display: inline; float: right}
 
 nav a {
     color: #000000;
@@ -36,7 +36,10 @@ nav a:hover {
     padding-top: 15px
 }
 
-h1 {font-weight: bold; font-size: 19px}
+h1 {
+    font-weight: bold;
+    font-size: 19px
+}
 
 #search-logo {
     background-color: #F2F2F2;
@@ -86,10 +89,151 @@ input {
     padding-left: 15px;
 }
 
-h2 {/*font-weight: bold;*/ color: green}
+#heberg {
+    margin-top: 30px;
+}
+
+#blue {
+    color: #0065FC;
+    padding: 4px 8px;
+    margin-right: 8px;
+    border: 1px #F2F2F2 solid;
+    border-radius: 50px
+}
+
+#heberg-pop {
+    display: flex;
+    justify-content: space-between
+}
+
+#hebergements, #populaire {
+    background-color: #F2F2F2;
+    padding: 36px;
+    border-radius: 15px
+}
+
+#hebergements {
+    width: 690px
+}
+
+h2 {
+    font-size: 19px
+}
+
+#heberg-tofs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.heberg-link {
+    text-decoration: none;
+    color: black;
+}
+
+.heberg-card {
+    background-color: white;
+    border: 4px white solid;
+    border-radius: 10px;
+    width: 205px
+}
+
+.heberg-tit, .heberg-tex, .heberg-starblue {
+    padding-left: 10px
+}
+
+.heberg-tit {
+    font-size: 14px
+}
+
+.heberg-tex {
+    font-size: 13px
+}
+
+.heberg-starblue {
+    font-size: 9px;
+    color: #0065FC
+}
+.heberg-stargrey {
+    font-size: 9px;
+    color: #F2F2F2
+}
+
+#heberg-img1 {
+    border-radius: 10px 10px 0 0;
+    background-image: url(Images/Hebergements/Aubergelacannebiere.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
+#heberg-img2 {
+    border-radius: 10px 10px 0 0;
+    background-image: url(Images/Hebergements/Hotelduport.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
+#heberg-img3 {
+    border-radius: 10px 10px 0 0;
+    background-image: url(Images/Hebergements/Hotellesmouettes.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
+#heberg-img4 {
+    border-radius: 10px 10px 0 0;
+    background-image: url(Images/Hebergements/Hoteldelamer.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
 
 p {font-size: 14px}
 
 footer {
-    background-color: #F2F2F2
+    padding: 0 53px;
+    margin: 0 -8px;
+    background-color: #F2F2F2;
+    height: 1000px
 }
+
+/*
+display: flex;
+
+justify-content: flex-start ==> éléments au côté gauche du conteneur.
+justify-content: flex-end ==> éléments au côté droit du conteneur.
+justify-content: center ==> éléments au centre du conteneur.
+justify-content: space-between ==> éléments avec un espace égal entre eux.
+justify-content: space-around ==> éléments avec un espace égal autour d'eux.
+
+align-items: flex-start ==> éléments en haut du conteneur.
+align-items: flex-end ==> éléments en bas du conteneur.
+align-items: center ==> éléments au centre vertical du conteneur.
+align-items: baseline ==> éléments à la ligne de base du conteneur.
+align-items: stretch ==> éléments étirés pour s'adapter au conteneur.
+
+flex-direction: row ==> éléments dans la même direction que le texte.
+flex-direction: row-reverse ==> éléments dans la direction opposée au texte.
+flex-direction: column ==> éléments de haut en bas.
+flex-direction: column-reverse ==> éléments de bas en haut.
+
+order: -1/0/1 ==> modifie l'ordre d'un élément individuel, valeur par défaut à 0.
+align-self: <comme align-items> ==> aligne verticalement un élément individuel.
+
+flex-wrap: nowrap ==> éléments sur une seule ligne.
+flex-wrap: wrap ==> éléments sur plusieurs lignes si besoin.
+flex-wrap: wrap-reverse ==> éléments sur plusieurs lignes si besoin, ordre inversé.
+
+flex-flow combine flex-direction et flex-wrap. Ex : flex-flow: row wrap
+
+align-content: flex-start ==> lignes en haut du conteneur.
+align-content: flex-end ==> lignes en bas du conteneur.
+align-content: center ==> lignes au centre vertical du conteneur.
+align-content: space-between ==> lignes avec un espace égal entre elles.
+align-content: space-around ==> lignes avec un espace égal autour d'elles.
+align-content: stretch ==> lignes étirées pour s'adapter au conteneur.
+*/

@@ -27,7 +27,7 @@
         <header>
             <nav>
                 <img src="Images/Logo.png" alt="Logo" width="85">
-                <div id="menu">
+                <div>
                     <a href="#heberg">Hébergements</a>
                     <a href="#activ">Activités</a>
                     <a href="Signup.html" id="sign-up">S'inscrire</a>
@@ -54,15 +54,64 @@
                 </p>
             </section>
             <section id="heberg">
-                <p>img info - Plus de 500 logements sont disponibles dans cette ville</p>
-                <h2>Hébergements à Marseille</h2>
-                <p>3 photos</p> <!-- Chaque carte doit être cliquable dans son intégralité. -->
-                <p>3 photos</p> <!-- Les liens sont vides. -->
-                <p>Afficher plus</p>
-                <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
-                <p>1 photo</p>
-                <p>1 photo</p>
-                <p>1 photo</p>
+                <p><i class="fas fa-info" id="blue"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                <div id="heberg-pop">
+                    <div id="hebergements">
+                        <h2>Hébergements à Marseille</h2>
+                        <!-- Chaque carte doit être cliquable dans son intégralité. -->
+                        <!-- Les liens sont vides. -->
+                        <div id="heberg-tofs">
+                            <a href="#" class="heberg-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img1"></div>
+                                    <span class="heberg-tit"><b>Auberge la Cannebière</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de <b>25€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                    <span class="heberg-stargrey"><i class="fas fa-star grey-star"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="heberg-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img2"></div>
+                                    <span class="heberg-tit"><b>Hôtel du port</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de 52<b>€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="heberg-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img3"></div>
+                                    <span class="heberg-tit"><b>Hôtel Les mouettes</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de 76<b>€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                    <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
+                                </div>
+                            </a>
+                            <a href="http://www.thermidor.xyz" class="heberg-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img4"></div>
+                                    <span class="heberg-tit"><b>Hôtel de la mer</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de 46<b>€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i></span>
+                                    <span class="heberg-stargrey"><i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <p>3 photos</p>
+                        <p>Afficher plus</p>
+                    </div>
+                    <div id="populaire">
+                        <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
+                        <p>1 photo</p>
+                        <p>1 photo</p>
+                        <p>1 photo</p>
+                    </div>
+                </div>
             </section>
             <section id="activ">
                 <h2>Activités à Marseille</h2>
@@ -72,6 +121,5 @@
         <footer>
             <p>Footer avec "A propos", "Nos hébergements", "Assistance"</p>
         </footer>
-        <div style="height: 1000px; background-color: #F2F2F2"></div>
     </body>
 </html>
