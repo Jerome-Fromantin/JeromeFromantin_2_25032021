@@ -19,7 +19,6 @@
         <!--
         Respecter les maquettes desktop et mobile et prévoir pour tablettes.
         Choisir les formats d'images adaptés.
-        Utiliser Flexbox, voir Flexbox Froggy.
         Couleurs : bleu (#0065FC), bleu clair (#DEEBFF), gris (#F2F2F2).
         En fin de chaque journée, vérifier le code avec le validateur W3C.
         De même, versionner le code sur GitHub.
@@ -58,20 +57,20 @@
                 <div id="heberg-pop">
                     <div id="hebergements">
                         <h2>Hébergements à Marseille</h2>
-                        <!-- Chaque carte doit être cliquable dans son intégralité. -->
-                        <!-- Les liens sont vides. -->
                         <div id="heberg-tofs">
-                            <a href="#" class="heberg-link">
+                            <!-- Chaque carte est cliquable dans son intégralité. -->
+                            <!-- Les liens sont vides. -->
+                            <a href="#" class="card-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img1"></div>
                                     <span class="heberg-tit"><b>Auberge la Cannebière</b></span>
                                     <br><span class="heberg-tex">Nuit à partir de <b>25€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
-                                    <span class="heberg-stargrey"><i class="fas fa-star grey-star"></i></span>
+                                    <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="heberg-link">
+                            <a href="#" class="card-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img2"></div>
                                     <span class="heberg-tit"><b>Hôtel du port</b></span>
@@ -81,7 +80,7 @@
                                     <i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="heberg-link">
+                            <a href="#" class="card-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img3"></div>
                                     <span class="heberg-tit"><b>Hôtel Les mouettes</b></span>
@@ -91,7 +90,7 @@
                                     <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="http://www.thermidor.xyz" class="heberg-link">
+                            <a href="#" class="card-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img4"></div>
                                     <span class="heberg-tit"><b>Hôtel de la mer</b></span>
@@ -101,20 +100,120 @@
                                     <span class="heberg-stargrey"><i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
                                 </div>
                             </a>
+                            <a href="#" class="card-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img5"></div>
+                                    <span class="heberg-tit"><b>Auberge Le Panier</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de <b>23€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                    <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="card-link">
+                                <div class="heberg-card">
+                                    <div id="heberg-img6"></div>
+                                    <span class="heberg-tit"><b>Hôtel chez Amina</b></span>
+                                    <br><span class="heberg-tex">Nuit à partir de 96<b>€</b></span>
+                                    <br><span class="heberg-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i></span>
+                                </div>
+                            </a>
                         </div>
-                        <p>3 photos</p>
-                        <p>Afficher plus</p>
+                        <p id="more">Afficher plus</p>
                     </div>
                     <div id="populaire">
-                        <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
-                        <p>1 photo</p>
-                        <p>1 photo</p>
-                        <p>1 photo</p>
+                        <h2 id="popu-titre">Les plus populaires<i class="fas fa-chart-line"></i></h2>
+                        <div id="popu-tofs">
+                            <a href="#" class="card-link">
+                                <div class="popu-card">
+                                    <div id="popu-img1"></div>
+                                    <div class="popu-card-text">
+                                        <p class="popu-tit"><b>Hôtel Le soleil du<br>matin</b>
+                                        <br><span class="popu-tex">Nuit à partir de 128<b>€</b></span></p>
+                                        <p class="popu-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i></p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card-link">
+                                <div class="popu-card">
+                                    <div id="popu-img2"></div>
+                                    <div class="popu-card-text">
+                                        <p class="popu-tit"><b>Au cœur de l'eau<br>Chambres d'hôtes</b>
+                                        <br><span class="popu-tex">Nuit à partir de 71<b>€</b></span></p>
+                                        <p class="popu-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <span class="heberg-stargrey"><i class="fas fa-star"></i></span></p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="card-link">
+                                <div class="popu-card">
+                                    <div id="popu-img3"></div>
+                                    <div class="popu-card-text">
+                                        <p class="popu-tit"><b>Hôtel Tout bleu et<br>Blanc</b>
+                                        <br><span class="popu-tex">Nuit à partir de 68<b>€</b></span></p>
+                                        <p class="popu-starblue"><i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                        <span class="heberg-stargrey"><i class="fas fa-star"></i></span></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
             <section id="activ">
                 <h2>Activités à Marseille</h2>
+                <div id="activ-tofs">
+                    <a href="#" class="card-link">
+                        <div class="activ-card1">
+                            <div id="activ-img1"></div>
+                            <span class="activ-tit"><b>Vieux Port</b></span>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link">
+                        <div class="activ-card2">
+                            <div id="activ-img2"></div>
+                            <span class="activ-tit"><b>Fort de Pomègues</b></span>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link">
+                        <div class="activ-card2">
+                            <div id="activ-img3"></div>
+                            <span class="activ-tit"><b>Îles du Frioul</b></span>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link">
+                        <div class="activ-card1">
+                            <div id="activ-img4"></div>
+                            <span class="activ-tit"><b>Parc National des Calanques</b></span>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link">
+                        <div class="activ-card2">
+                            <div id="activ-img5"></div>
+                            <span class="activ-tit"><b>Notre-Dame-de-la-Garde</b></span>
+                        </div>
+                    </a>
+                    <a href="#" class="card-link">
+                        <div class="activ-card2">
+                            <div id="activ-img6"></div>
+                            <span class="activ-tit"><b>Parc Longchamp</b></span>
+                        </div>
+                    </a>
+                </div>
+                <p>
+                    <img src="Images/Activites/Vieuxport.jpg" alt="">
+                    <img src="Images/Activites/Fortdepomegues.jpg" alt="">
+                    <img src="Images/Activites/Ilesdufrioul.jpg" alt="">
+                    <img src="Images/Activites/Parcnationaldescalanques.jpg" alt="">
+                    <img src="Images/Activites/Notredamedelagarde.jpg" alt="">
+                    <img src="Images/Activites/Parclongchamp.jpg" alt="">
+                </p>
                 <p>Photos</p>
             </section>
         </main>

@@ -1,14 +1,17 @@
 /*Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» —*/
 
-html, body {
+body {
     font-family: 'Raleway', sans-serif
 }
 
+/* PARTIE HEADER */
+/* "main" est la partie entre "header" et "footer". */
 header, main {
     padding: 0 45px;
     background-color: #FFFFFF
 }
 
+/* Ligne avec le logo et le menu, utilisé par flexbox. */
 nav {
     padding-top: 30px;
     display: flex;
@@ -27,26 +30,36 @@ nav a:hover {
     border-top: 2px #0065FC solid
 }
 
+/* Concerne spécifiquement le lien "S'inscrire". */
 #sign-up {
     font-weight: bold;
     color: #0065FC
 }
+/* FIN DE LA PARTIE HEADER. */
 
+/* PARTIE RECHERCHE, DU TITRE AUX FILTRES. */
+/* Section entière. */
 #recherche {
     padding-top: 15px
 }
 
+/* Titre. */
 h1 {
     font-weight: bold;
     font-size: 19px
 }
 
+/* Paragraphe de base, utilisé dans cette partie et dans d'autres. */
+p {font-size: 14px}
+
+/* Partie grisée à gauche du champ de saisie. */
 #search-logo {
     background-color: #F2F2F2;
     padding: 15px;
     border-radius: 15px 0 0 15px
 }
 
+/* Champ de saisie et bouton. */
 input {
     padding: 0 15px;
     height: 44px;
@@ -54,6 +67,7 @@ input {
     font-weight: bold;
 }
 
+/* Concerne spécifiquement le bouton. */
 #search-submit {
     background-color: #0065FC;
     border-radius: 0 15px 15px 0;
@@ -61,12 +75,14 @@ input {
     color: white
 }
 
+/* Ligne des filtres. */
 #filtre {
     font-size: 15px;
     font-weight: bold;
     margin-top: 25px
 }
 
+/* Chacun des 4 filtres. */
 .filtres {
     padding: 12px 15px 12px 0;
     border: 2px #F2F2F2 solid;
@@ -78,6 +94,7 @@ input {
     color: white
 }
 
+/* Dans chaque filtre, rond bleu de l'icône. */
 .blue {
     color: #0065FC;
     background-color: #DEEBFF;
@@ -85,14 +102,19 @@ input {
     border-radius: 50px
 }
 
+/* Dans chaque filtre, partie texte. */
 .texte-filtre {
     padding-left: 15px;
 }
+/* FIN DE LA PARTIE RECHERCHE. */
 
+/* PARTIE HEBERGEMENTS, AVEC LES BLOCS "HEBERGEMENTS" ET "LES PLUS POPULAIRES". */
+/* Section entière. */
 #heberg {
     margin-top: 30px;
 }
 
+/* Concerne spécifiquement l'icône "i". */
 #blue {
     color: #0065FC;
     padding: 4px 8px;
@@ -101,105 +123,285 @@ input {
     border-radius: 50px
 }
 
+/* Conteneur avec "Hébergements" et "Les plus populaires", utilisé par flexbox. */
 #heberg-pop {
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    height: 560px
 }
 
+/* Chacun des 2 blocs. */
 #hebergements, #populaire {
     background-color: #F2F2F2;
-    padding: 36px;
+    padding: 20px 36px 0 36px;
     border-radius: 15px
 }
 
+/* Bloc de gauche. */
 #hebergements {
     width: 690px
 }
 
+/* Titres de blocs. */
 h2 {
     font-size: 19px
 }
 
+/* Conteneur affichant les 6 images, utilisé par flexbox. */
 #heberg-tofs {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 385px
 }
 
-.heberg-link {
+/* Lien englobant chaque carte de "Hébergements", "Les plus populaires" et "Activités". */
+.card-link {
     text-decoration: none;
     color: black;
 }
 
+/* Chacune des 6 cartes de "Hébergements". */
 .heberg-card {
     background-color: white;
     border: 4px white solid;
     border-radius: 10px;
+    box-shadow:0px 0px 10px #BBBBBB;
     width: 205px
 }
 
+/* Dans chaque carte de "Hébergements" et "Les plus populaires", titre, texte et étoiles bleues. */
 .heberg-tit, .heberg-tex, .heberg-starblue {
     padding-left: 10px
 }
 
-.heberg-tit {
+.heberg-tit, .popu-tit {
     font-size: 14px
 }
 
-.heberg-tex {
+.heberg-tex, .popu-tex {
     font-size: 13px
 }
 
-.heberg-starblue {
+.heberg-starblue, .popu-starblue {
     font-size: 9px;
     color: #0065FC
 }
+
+/* Etoiles grises, pour les cartes en contenant. */
 .heberg-stargrey {
     font-size: 9px;
     color: #F2F2F2
 }
 
+/* Images dans chacune des 6 cartes de "Hébergements". */
+#heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
+
+/* Concerne spécifiquement l'image de la carte 1. */
 #heberg-img1 {
-    border-radius: 10px 10px 0 0;
-    background-image: url(Images/Hebergements/Aubergelacannebiere.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    margin-bottom: 10px
+    background-image: url(Images/Hebergements/Aubergelacannebiere.jpg)
 }
+
+/* Concerne spécifiquement l'image de la carte 2. */
 #heberg-img2 {
-    border-radius: 10px 10px 0 0;
-    background-image: url(Images/Hebergements/Hotelduport.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    margin-bottom: 10px
+    background-image: url(Images/Hebergements/Hotelduport.jpg)
 }
+
+/* Concerne spécifiquement l'image de la carte 3. */
 #heberg-img3 {
-    border-radius: 10px 10px 0 0;
-    background-image: url(Images/Hebergements/Hotellesmouettes.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    margin-bottom: 10px
+    background-image: url(Images/Hebergements/Hotellesmouettes.jpg)
 }
+
+/* Concerne spécifiquement l'image de la carte 4. */
 #heberg-img4 {
+    background-image: url(Images/Hebergements/Hoteldelamer.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 5. */
+#heberg-img5 {
+    background-image: url(Images/Hebergements/Aubergelepanier.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 6. */
+#heberg-img6 {
+    background-image: url(Images/Hebergements/Hotelchezamina.jpg)
+}
+
+/* Concerne spécifiquement "Afficher plus". */
+#more {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 40px
+}
+
+/* Bloc de droite. */
+#populaire {
+    width: 290px
+}
+
+/* Conteneur affichant le titre "Les plus populaires" et son icône, utilisé par flexbox. */
+#popu-titre {
+    display: flex;
+    justify-content: space-between
+}
+
+/* Conteneur affichant les 3 images, utilisé par flexbox. */
+#popu-tofs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 455px
+}
+
+/* Chacune des 3 cartes, utilisé par flexbox. */
+.popu-card {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    border: 4px white solid;
+    border-radius: 10px;
+    box-shadow:0px 0px 10px #BBBBBB;
+    width: 285px
+}
+
+/* Texte dans chacune de ces 3 cartes. */
+.popu-card-text {
+    padding-left: 20px
+}
+
+/* Concerne spécifiquement les étoiles bleues de ce bloc. */
+.popu-starblue {
+    padding-top: 30px
+}
+
+/* Images dans chacune des 3 cartes. */
+#popu-img1, #popu-img2, #popu-img3 {
+    border-radius: 10px 0 0 10px;
+    background-position: center;
+    background-size: cover;
+    height: 120px;
+    width: 110px;
+}
+
+/* Concerne spécifiquement l'image de la carte 1. */
+#popu-img1 {
+    background-image: url(Images/Hebergements/Hotellesoleildumatin.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 2. */
+#popu-img2 {
+    background-image: url(Images/Hebergements/Aucoeurdeleau.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 3. */
+#popu-img3 {
+    background-image: url(Images/Hebergements/Hoteltoutbleuetblanc.jpg)
+}
+/* FIN DE LA PARTIE HEBERGEMENTS. */
+
+/* PARTIE ACTIVITES. */
+/* Section entière. */
+#activ {
+    margin-top: 50px;
+}
+
+/* Conteneur affichant les 6 images, utilisé par flexbox. */
+#activ-tofs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 500px
+}
+
+/* Chacune des 2 grandes cartes. */
+.activ-card1 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0px 0px 10px #BBBBBB;
+    width: 205px
+}
+
+/* Chacune des 4 petites cartes. */
+.activ-card2 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0px 0px 10px #BBBBBB;
+    width: 205px
+}
+
+/* Titre de chaque carte. */
+.activ-tit {
+    padding-left: 10px;
+    font-size: 14px
+}
+
+/* Images dans les 2 grandes cartes. */
+#activ-img1, #activ-img4 {
     border-radius: 10px 10px 0 0;
-    background-image: url(Images/Hebergements/Hoteldelamer.jpg);
     background-position: center;
     background-size: cover;
     height: 100px;
     margin-bottom: 10px
 }
 
-p {font-size: 14px}
+/* Images dans les 4 petites cartes. */
+#activ-img2, #activ-img3, #activ-img5, #activ-img6 {
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    margin-bottom: 10px
+}
 
+/* Concerne spécifiquement l'image de la carte 1. */
+#activ-img1 {
+    background-image: url(Images/Activites/Vieuxport.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 2. */
+#activ-img2 {
+    background-image: url(Images/Activites/Fortdepomegues.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 3. */
+#activ-img3 {
+    background-image: url(Images/Activites/Ilesdufrioul.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 4. */
+#activ-img4 {
+    background-image: url(Images/Activites/Parcnationaldescalanques.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 5. */
+#activ-img5 {
+    background-image: url(Images/Activites/Notredamedelagarde.jpg)
+}
+
+/* Concerne spécifiquement l'image de la carte 6. */
+#activ-img6 {
+    background-image: url(Images/Activites/Parclongchamp.jpg)
+}
+/* FIN DE LA PARTIE ACTIVITES. */
+
+/* PARTIE FOOTER. */
 footer {
     padding: 0 53px;
     margin: 0 -8px;
     background-color: #F2F2F2;
     height: 1000px
 }
+/* FIN DE LA PARTIE FOOTER. */
 
 /*
 display: flex;
