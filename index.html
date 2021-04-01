@@ -5,7 +5,7 @@
         <title>Reservia</title>
         <meta name="description" content='Projet de formation "OpenClassrooms" - Intégration de maquette.'>
         <meta name="keywords" content="OpenClassrooms, intégration, maquette, HTML, CSS, responsive, BootStrap">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jérôme Fromantin">
         <link rel="stylesheet" href="Style.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -18,8 +18,6 @@
     <body>
         <!--
         Respecter les maquettes desktop et mobile et prévoir pour tablettes.
-        Choisir les formats d'images adaptés.
-        Couleurs : bleu (#0065FC), bleu clair (#DEEBFF), gris (#F2F2F2).
         En fin de chaque journée, vérifier le code avec le validateur W3C.
         De même, versionner le code sur GitHub.
         -->
@@ -121,7 +119,7 @@
                                 </div>
                             </a>
                         </div>
-                        <p id="more">Afficher plus</p>
+                        <p id="more"><a href="#" class="card-link">Afficher plus</a></p>
                     </div>
                     <div id="populaire">
                         <h2 id="popu-titre">Les plus populaires<i class="fas fa-chart-line"></i></h2>
@@ -170,55 +168,65 @@
                 <h2>Activités à Marseille</h2>
                 <div id="activ-tofs">
                     <a href="#" class="card-link">
-                        <div class="activ-card1">
+                        <div class="activ-card">
                             <div id="activ-img1"></div>
-                            <span class="activ-tit"><b>Vieux Port</b></span>
+                            <p class="activ-tit"><b>Vieux Port</b></p>
                         </div>
                     </a>
+                    <div class="activ-small-tofs">
+                        <a href="#" class="card-link">
+                            <div class="activ-card">
+                                <div id="activ-img2"></div>
+                                <p class="activ-tit"><b>Fort de Pomègues</b></p>
+                            </div>
+                        </a>
+                        <a href="#" class="card-link">
+                            <div class="activ-card">
+                                <div id="activ-img3"></div>
+                                <p class="activ-tit"><b>Îles du Frioul</b></p>
+                            </div>
+                        </a>
+                    </div>
                     <a href="#" class="card-link">
-                        <div class="activ-card2">
-                            <div id="activ-img2"></div>
-                            <span class="activ-tit"><b>Fort de Pomègues</b></span>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="activ-card2">
-                            <div id="activ-img3"></div>
-                            <span class="activ-tit"><b>Îles du Frioul</b></span>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="activ-card1">
+                        <div class="activ-card">
                             <div id="activ-img4"></div>
-                            <span class="activ-tit"><b>Parc National des Calanques</b></span>
+                            <p class="activ-tit"><b>Parc National des Calanques</b></p>
                         </div>
                     </a>
-                    <a href="#" class="card-link">
-                        <div class="activ-card2">
-                            <div id="activ-img5"></div>
-                            <span class="activ-tit"><b>Notre-Dame-de-la-Garde</b></span>
-                        </div>
-                    </a>
-                    <a href="#" class="card-link">
-                        <div class="activ-card2">
-                            <div id="activ-img6"></div>
-                            <span class="activ-tit"><b>Parc Longchamp</b></span>
-                        </div>
-                    </a>
+                    <div class="activ-small-tofs">
+                        <a href="#" class="card-link">
+                            <div class="activ-card">
+                                <div id="activ-img5"></div>
+                                <p class="activ-tit"><b>Notre-Dame-de-la-Garde</b></p>
+                            </div>
+                        </a>
+                        <a href="#" class="card-link">
+                            <div class="activ-card">
+                                <div id="activ-img6"></div>
+                                <p class="activ-tit"><b>Parc Longchamp</b></p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <p>
-                    <img src="Images/Activites/Vieuxport.jpg" alt="">
-                    <img src="Images/Activites/Fortdepomegues.jpg" alt="">
-                    <img src="Images/Activites/Ilesdufrioul.jpg" alt="">
-                    <img src="Images/Activites/Parcnationaldescalanques.jpg" alt="">
-                    <img src="Images/Activites/Notredamedelagarde.jpg" alt="">
-                    <img src="Images/Activites/Parclongchamp.jpg" alt="">
-                </p>
-                <p>Photos</p>
             </section>
         </main>
         <footer>
-            <p>Footer avec "A propos", "Nos hébergements", "Assistance"</p>
+            <div id="footer-apropos">
+                <p class="footer-tit">A propos</p>
+                <p><a href="#" class="footer-link">Fonctionnement du site</a></p>
+                <p><a href="#" class="footer-link">Conditions générales de vente</a></p>
+                <p><a href="#" class="footer-link">Données et confidentialité</a></p>
+            </div>
+            <div id="footer-hebergements">
+                <p class="footer-tit">Nos hébergements</p>
+                <p><a href="#" class="footer-link">Charte qualité</a></p>
+                <p><a href="#" class="footer-link">Soumettre votre hôtel</a></p>
+            </div>
+            <div>
+                <p class="footer-tit">Assistance</p>
+                <p><a href="#" class="footer-link">Centre d'aide</a></p>
+                <p><a href="#" class="footer-link">Nous contacter</a></p>
+            </div>
         </footer>
     </body>
 </html>

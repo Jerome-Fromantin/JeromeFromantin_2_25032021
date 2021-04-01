@@ -157,8 +157,8 @@ h2 {
     height: 385px
 }
 
-/* Lien englobant chaque carte de "Hébergements", "Les plus populaires" et "Activités". */
-.card-link {
+/* Lien englobant chaque carte de "Hébergements", "Les plus populaires" et "Activités", ainsi que le footer. */
+.card-link, .footer-link {
     text-decoration: none;
     color: black;
 }
@@ -316,51 +316,37 @@ h2 {
 
 /* Conteneur affichant les 6 images, utilisé par flexbox. */
 #activ-tofs {
+    margin: 20px 0 40px 0;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-between;
-    height: 500px
+    height: 400px
 }
 
-/* Chacune des 2 grandes cartes. */
-.activ-card1 {
+/* Chacune des 6 cartes. */
+.activ-card {
     background-color: white;
     border-radius: 10px;
     box-shadow:0px 0px 10px #BBBBBB;
-    width: 205px
-}
-
-/* Chacune des 4 petites cartes. */
-.activ-card2 {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow:0px 0px 10px #BBBBBB;
-    width: 205px
+    width: 260px
 }
 
 /* Titre de chaque carte. */
 .activ-tit {
-    padding-left: 10px;
+    padding: 0 0 15px 10px;
     font-size: 14px
+}
+
+/* Images dans les 6 cartes. */
+#activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px
 }
 
 /* Images dans les 2 grandes cartes. */
 #activ-img1, #activ-img4 {
-    border-radius: 10px 10px 0 0;
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    margin-bottom: 10px
-}
-
-/* Images dans les 4 petites cartes. */
-#activ-img2, #activ-img3, #activ-img5, #activ-img6 {
-    border-radius: 10px 10px 0 0;
-    background-position: center;
-    background-size: cover;
-    height: 100px;
-    margin-bottom: 10px
+    height: 340px;
 }
 
 /* Concerne spécifiquement l'image de la carte 1. */
@@ -370,12 +356,15 @@ h2 {
 
 /* Concerne spécifiquement l'image de la carte 2. */
 #activ-img2 {
-    background-image: url(Images/Activites/Fortdepomegues.jpg)
+    background-image: url(Images/Activites/Fortdepomegues.jpg);
+    height: 160px;
 }
 
 /* Concerne spécifiquement l'image de la carte 3. */
 #activ-img3 {
-    background-image: url(Images/Activites/Ilesdufrioul.jpg)
+    background-image: url(Images/Activites/Ilesdufrioul.jpg);
+    background-position: center top;
+    height: 100px;
 }
 
 /* Concerne spécifiquement l'image de la carte 4. */
@@ -385,23 +374,85 @@ h2 {
 
 /* Concerne spécifiquement l'image de la carte 5. */
 #activ-img5 {
-    background-image: url(Images/Activites/Notredamedelagarde.jpg)
+    background-image: url(Images/Activites/Notredamedelagarde.jpg);
+    background-position: center top;
+    height: 120px;
 }
 
 /* Concerne spécifiquement l'image de la carte 6. */
 #activ-img6 {
-    background-image: url(Images/Activites/Parclongchamp.jpg)
+    background-image: url(Images/Activites/Parclongchamp.jpg);
+    background-position: center top;
+    height: 140px;
+}
+
+/* 2 conteneurs affichant chacun 2 petites images, utilisé par flexbox. */
+.activ-small-tofs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column
 }
 /* FIN DE LA PARTIE ACTIVITES. */
 
-/* PARTIE FOOTER. */
+/* PARTIE FOOTER, UTILISE PAR FLEXBOX. */
 footer {
-    padding: 0 53px;
-    margin: 0 -8px;
+    padding: 30px 53px;
+    margin: 0 -8px -8px -8px;
     background-color: #F2F2F2;
-    height: 1000px
+    display: flex;
+    justify-content: flex-start
+}
+
+/* Concerne spécifiquement le menu "A propos". */
+#footer-apropos {
+    margin-right: 200px
+}
+
+/* Concerne spécifiquement le menu "Nos hébergements". */
+#footer-hebergements {
+    margin-right: 260px
+}
+
+/* Titres du footer. */
+.footer-tit {
+    font-size: 16px;
+    font-weight: bold
 }
 /* FIN DE LA PARTIE FOOTER. */
+
+/* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
+@media all and (max-width: 375px) {
+    header, main {
+        padding: 0 15px;
+    }
+    
+    nav {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between
+    }
+    
+    nav a {
+        color: #000000;
+        text-decoration: none;
+        padding: 37px 20px;
+        margin-left: 10px;
+        font-size: 14px
+    }
+    nav a:hover {
+        color: #0065FC;
+        border-top: 2px #0065FC solid
+    }
+    
+    #sign-up {
+        font-weight: bold;
+        color: #0065FC
+    }
+}
+/* FIN DES MEDIA QUERIES "IPHONE 8". */
+
+/* MEDIA QUERIES POUR LES TABLETTES (DIMENSIONS A VOIR : 992px ? 600px ?). */
+/* FIN DES MEDIA QUERIES "TABLETTES". */
 
 /*
 display: flex;
