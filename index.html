@@ -22,14 +22,30 @@
         De même, versionner le code sur GitHub.
         -->
         <header>
+            <!-- "nav" est un conteneur flexbox en "space-between". -->
             <nav>
-                <img src="Images/Logo.png" alt="Logo" width="85">
-                <div>
-                    <a href="#heberg">Hébergements</a>
-                    <a href="#activ">Activités</a>
-                    <a href="Signup.html" id="sign-up">S'inscrire</a>
+                <img src="Images/Logo.png" alt="Logo" width="95">
+                <!-- "menu" est un conteneur flexbox en "space-between". -->
+                <div id="menu">
+                    <!-- "ancres-heberg-activ" et "lien-inscr" sont nécessaires pour la vue en iPhone 8. -->
+                    <div id="ancres-heberg-activ">
+                        <a href="#heberg">Hébergements</a>
+                        <a href="#activ">Activités</a>
+                    </div>
+                    <div id="lien-inscr">
+                        <a href="Signup.html" id="sign-up">S'inscrire</a>
+                    </div>
                 </div>
             </nav>
+            <!-- "menu-mobile" est un conteneur qui n'apparaît qu'en vue iPhone 8. -->
+            <div id="menu-mobile">
+                <div class="liens-mobile">
+                    <a href="#heberg">Hébergements</a>
+                </div>
+                <div class="liens-mobile">
+                    <a href="#activ">Activités</a>
+                </div>
+            </div>
         </header>
         <main>
             <section id="recherche">
@@ -52,9 +68,11 @@
             </section>
             <section id="heberg">
                 <p><i class="fas fa-info" id="blue"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                <!-- "heberg-pop" est un conteneur flexbox en "space-between". -->
                 <div id="heberg-pop">
                     <div id="hebergements">
                         <h2>Hébergements à Marseille</h2>
+                        <!-- "heberg-tofs" est un conteneur flexbox en "space-between". -->
                         <div id="heberg-tofs">
                             <!-- Chaque carte est cliquable dans son intégralité. -->
                             <!-- Les liens sont vides. -->
@@ -122,9 +140,12 @@
                         <p id="more"><a href="#" class="card-link">Afficher plus</a></p>
                     </div>
                     <div id="populaire">
+                        <!-- "popu-titre" est un conteneur flexbox en "space-between". -->
                         <h2 id="popu-titre">Les plus populaires<i class="fas fa-chart-line"></i></h2>
+                        <!-- "popu-tofs" est un conteneur flexbox en "space-between". -->
                         <div id="popu-tofs">
                             <a href="#" class="card-link">
+                                <!-- "popu-card" est un conteneur flexbox en "flex-start". -->
                                 <div class="popu-card">
                                     <div id="popu-img1"></div>
                                     <div class="popu-card-text">
@@ -166,6 +187,7 @@
             </section>
             <section id="activ">
                 <h2>Activités à Marseille</h2>
+                <!-- "activ-tofs" est un conteneur flexbox en "space-between". -->
                 <div id="activ-tofs">
                     <a href="#" class="card-link">
                         <div class="activ-card">
@@ -173,6 +195,7 @@
                             <p class="activ-tit"><b>Vieux Port</b></p>
                         </div>
                     </a>
+                    <!-- "activ-small-tofs" est un conteneur flexbox en "space-between" et "column". -->
                     <div class="activ-small-tofs">
                         <a href="#" class="card-link">
                             <div class="activ-card">
@@ -210,6 +233,7 @@
                 </div>
             </section>
         </main>
+        <!-- "footer" est un conteneur flexbox en "flex-start". -->
         <footer>
             <div id="footer-apropos">
                 <p class="footer-tit">A propos</p>

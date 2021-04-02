@@ -30,10 +30,26 @@ nav a:hover {
     border-top: 2px #0065FC solid
 }
 
+/* Menu avec les 3 liens, utilisé par flexbox. */
+#menu {
+    display: flex;
+    justify-content: space-between
+}
+
+/* Les 2 liens du menu servant d'ancres. */
+#ancres-heberg-activ {
+    color: red
+}
+
 /* Concerne spécifiquement le lien "S'inscrire". */
 #sign-up {
     font-weight: bold;
     color: #0065FC
+}
+
+/* Concerne spécifiquement le menu qui n'apparaît qu'en vue iPhone 8. */
+#menu-mobile {
+    display: none
 }
 /* FIN DE LA PARTIE HEADER. */
 
@@ -421,32 +437,55 @@ footer {
 /* FIN DE LA PARTIE FOOTER. */
 
 /* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
-@media all and (max-width: 375px) {
+@media all and (max-width: 500px) {
     header, main {
         padding: 0 15px;
     }
     
-    nav {
+    nav { /* identique au dektop */
         padding-top: 30px;
         display: flex;
         justify-content: space-between
     }
     
-    nav a {
-        color: #000000;
-        text-decoration: none;
-        padding: 37px 20px;
-        margin-left: 10px;
-        font-size: 14px
-    }
     nav a:hover {
-        color: #0065FC;
-        border-top: 2px #0065FC solid
+        border-top: none;
+        border-bottom: 2px #0065FC solid
+    }
+
+    #menu { /* identique au dektop */
+        display: flex;
+        justify-content: space-between
+    }
+
+    #menu a {
+        font-size: 16px;
+        padding: 0 0 10px 0
+    }
+
+    #ancres-heberg-activ {
+        display: none
     }
     
-    #sign-up {
-        font-weight: bold;
-        color: #0065FC
+    #lien-inscr {
+        padding-top: 10px;
+    }
+
+    #menu-mobile {
+        padding: 0;
+        margin: 0 -23px;
+        display: flex;
+        justify-content: space-around
+    }
+
+    .liens-mobile {width: 50%; text-align: center; border-bottom: 2px #F2F2F2 solid}
+    .liens-mobile:hover {border-bottom: 2px #0065FC solid}
+    
+    #menu-mobile a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 16px;
+        width: 50%; text-align: center; border-bottom: 2px #F2F2F2 solid
     }
 }
 /* FIN DES MEDIA QUERIES "IPHONE 8". */
