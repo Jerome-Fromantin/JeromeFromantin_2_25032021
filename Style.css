@@ -36,11 +36,6 @@ nav a:hover {
     justify-content: space-between
 }
 
-/* Les 2 liens du menu servant d'ancres. */
-#ancres-heberg-activ {
-    color: red
-}
-
 /* Concerne spécifiquement le lien "S'inscrire". */
 #sign-up {
     font-weight: bold;
@@ -71,12 +66,12 @@ p {font-size: 14px}
 /* Partie grisée à gauche du champ de saisie. */
 #search-logo {
     background-color: #F2F2F2;
-    padding: 15px;
+    padding: 16px;
     border-radius: 15px 0 0 15px
 }
 
 /* Champ de saisie et bouton. */
-input {
+input, button {
     padding: 0 15px;
     height: 44px;
     font-size: 15px;
@@ -84,11 +79,19 @@ input {
 }
 
 /* Concerne spécifiquement le bouton. */
-#search-submit {
+button {
     background-color: #0065FC;
+    height: 46px;
+    border: 0;
     border-radius: 0 15px 15px 0;
+    margin-left: -3px;
     text-align: center;
     color: white
+}
+
+/* Concerne spécifiquement l'icône qui n'apparaît qu'en vue iPhone 8. */
+#loupe {
+    display: none
 }
 
 /* Ligne des filtres. */
@@ -100,6 +103,8 @@ input {
 
 /* Chacun des 4 filtres. */
 .filtres {
+    font-size: 15px;
+    font-weight: bold;
     padding: 12px 15px 12px 0;
     border: 2px #F2F2F2 solid;
     border-radius: 50px;
@@ -128,6 +133,13 @@ input {
 /* Section entière. */
 #heberg {
     margin-top: 30px;
+}
+
+/* Conteneur avec l'icône "i" et la phrase, utilisé par flexbox. */
+#info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
 }
 
 /* Concerne spécifiquement l'icône "i". */
@@ -439,23 +451,12 @@ footer {
 /* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
 @media all and (max-width: 500px) {
     header, main {
-        padding: 0 15px;
-    }
-    
-    nav { /* identique au dektop */
-        padding-top: 30px;
-        display: flex;
-        justify-content: space-between
+        padding: 0 14px;
     }
     
     nav a:hover {
         border-top: none;
         border-bottom: 2px #0065FC solid
-    }
-
-    #menu { /* identique au dektop */
-        display: flex;
-        justify-content: space-between
     }
 
     #menu a {
@@ -472,20 +473,100 @@ footer {
     }
 
     #menu-mobile {
-        padding: 0;
-        margin: 0 -23px;
+        margin: 30px -22px 0 -22px;
         display: flex;
-        justify-content: space-around
+        justify-content: space-between
     }
 
-    .liens-mobile {width: 50%; text-align: center; border-bottom: 2px #F2F2F2 solid}
-    .liens-mobile:hover {border-bottom: 2px #0065FC solid}
+    .liens-mobile {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 2px #F2F2F2 solid
+    }
+    .liens-mobile:hover {
+        border-bottom: 2px #0065FC solid
+    }
     
-    #menu-mobile a {
+    .liens-mobile a {
         color: #000000;
         text-decoration: none;
+        font-size: 16px
+    }
+    .liens-mobile a:hover {
+        color: #0065FC
+    }
+
+    h1 {
+        font-size: 22px
+    }
+
+    p {
+        font-size: 16px
+    }
+
+    #search-logo {
+        padding: 16px 20px
+    }
+    
+    input, button {
+        font-size: 17px
+    }
+    
+    button {
+        border-radius: 15px;
+        margin-left: -10px
+    }
+    
+    #rech {
+        display: none
+    }
+    
+    #loupe {
+        display: block
+    }
+
+    #filtre {
+        font-size: 17px;
+    }
+
+    #fil-tit {
+        display: block
+    }
+
+    .filtres {
+        display: inline-block;
         font-size: 16px;
-        width: 50%; text-align: center; border-bottom: 2px #F2F2F2 solid
+        padding: 0 12px 0 0;
+        margin: 15px 8px 0 0
+    }
+
+    .texte-filtre {
+        padding-left: 12px;
+    }
+
+    #info {
+        align-items: flex-start
+    }
+
+    #blue {
+        font-size: 13px;
+    }
+
+    /* Conteneur avec "Hébergements" et "Les plus populaires", utilisé par flexbox. */
+    /*#heberg-pop {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        height: 560px
+    }*/
+
+    #heberg-pop {
+        margin-top: 30px;
+        display: flex;
+        /*justify-content: space-between;*/
+        flex-direction: row-reverse;
+        align-items: flex-start
     }
 }
 /* FIN DES MEDIA QUERIES "IPHONE 8". */

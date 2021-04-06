@@ -54,12 +54,13 @@
                 <!-- Ci-dessous, champ de saisie de la ville. Le bouton n'est pas fonctionnel. -->
                 <!-- <form method="post" action="#"> -->
                 <div>
-                    <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" size=17 id="search-text"><input type="submit" id="search-submit" value="Rechercher">
+                    <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" size=21 id="search-text"><button type="submit" id="search-submit"><span id="rech">Rechercher</span><span id="loupe"><i class="fas fa-search"></i></span></button>
                 </div>
                 <!-- </form> -->
                 <!-- Ci-dessous, les différents filtres applicables. Ils ne sont pas fonctionnels mais ils
                 changent d'apparence au survol. -->
-                <p id="filtre">Filtres
+                <p id="filtre">
+                    <span id="fil-tit">Filtres</span>
                     <span class="filtres"><i class="fas fa-money-bill-wave blue"></i><span class="texte-filtre">Économique</span></span>
                     <span class="filtres"><i class="fas fa-child blue"></i><span class="texte-filtre">Familial</span></span>
                     <span class="filtres"><i class="fas fa-heart blue"></i><span class="texte-filtre">Romantique</span></span>
@@ -67,7 +68,11 @@
                 </p>
             </section>
             <section id="heberg">
-                <p><i class="fas fa-info" id="blue"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                <!-- "info" est un conteneur flexbox en "flex-start". -->
+                <p id="info">
+                    <i class="fas fa-info" id="blue"></i>
+                    <span>Plus de 500 logements sont disponibles dans cette ville</span>
+                </p>
                 <!-- "heberg-pop" est un conteneur flexbox en "space-between". -->
                 <div id="heberg-pop">
                     <div id="hebergements">
