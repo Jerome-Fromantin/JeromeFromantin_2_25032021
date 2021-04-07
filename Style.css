@@ -30,6 +30,11 @@ nav a:hover {
     border-top: 2px #0065FC solid
 }
 
+/* Concerne spécifiquement le logo. */
+#logo {
+    width: 95px
+}
+
 /* Menu avec les 3 liens, utilisé par flexbox. */
 #menu {
     display: flex;
@@ -78,11 +83,17 @@ input, button {
     font-weight: bold;
 }
 
+/* Concerne spécifiquement le champ de recherche. */
+#search-text {
+    width: 205px;
+}
+
 /* Concerne spécifiquement le bouton. */
 button {
+    cursor: pointer;
     background-color: #0065FC;
     height: 46px;
-    border: 0;
+    border-color: transparent;
     border-radius: 0 15px 15px 0;
     margin-left: -3px;
     text-align: center;
@@ -155,20 +166,19 @@ button {
 #heberg-pop {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    height: 560px
+    justify-content: space-between
 }
 
 /* Chacun des 2 blocs. */
 #hebergements, #populaire {
     background-color: #F2F2F2;
-    padding: 20px 36px 0 36px;
+    padding: 20px 36px;
     border-radius: 15px
 }
 
 /* Bloc de gauche. */
 #hebergements {
-    width: 690px
+    width: 60%
 }
 
 /* Titres de blocs. */
@@ -272,7 +282,7 @@ h2 {
 
 /* Bloc de droite. */
 #populaire {
-    width: 290px
+    width: 25%
 }
 
 /* Conteneur affichant le titre "Les plus populaires" et son icône, utilisé par flexbox. */
@@ -308,7 +318,7 @@ h2 {
 
 /* Concerne spécifiquement les étoiles bleues de ce bloc. */
 .popu-starblue {
-    padding-top: 30px
+    padding-top: 25px
 }
 
 /* Images dans chacune des 3 cartes. */
@@ -385,13 +395,14 @@ h2 {
 /* Concerne spécifiquement l'image de la carte 2. */
 #activ-img2 {
     background-image: url(Images/Activites/Fortdepomegues.jpg);
+    background-position: center top 40%;
     height: 160px;
 }
 
 /* Concerne spécifiquement l'image de la carte 3. */
 #activ-img3 {
     background-image: url(Images/Activites/Ilesdufrioul.jpg);
-    background-position: center top;
+    background-position: center top 15%;
     height: 100px;
 }
 
@@ -449,7 +460,7 @@ footer {
 /* FIN DE LA PARTIE FOOTER. */
 
 /* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
-@media all and (max-width: 500px) {
+@media all and (max-width: 375px) {
     header, main {
         padding: 0 14px;
     }
@@ -553,20 +564,112 @@ footer {
         font-size: 13px;
     }
 
-    /* Conteneur avec "Hébergements" et "Les plus populaires", utilisé par flexbox. */
-    /*#heberg-pop {
-        margin-top: 30px;
+    #heberg-pop {
+        margin: 30px -22px 0 -22px;
         display: flex;
         justify-content: space-between;
-        height: 560px
-    }*/
+        flex-direction: column-reverse;
+        width: 100vw
+    }
 
-    #heberg-pop {
-        margin-top: 30px;
-        display: flex;
-        /*justify-content: space-between;*/
-        flex-direction: row-reverse;
-        align-items: flex-start
+    #populaire, #hebergements {
+        width: auto;
+        padding: 22px;
+        border-radius: 0
+    }
+
+    h2 {
+        font-size: 22px
+    }
+
+    .heberg-tit, .popu-tit {
+        font-size: 16px
+    }
+
+    .heberg-tex, .popu-tex {
+        font-size: 14px
+    }
+
+    .heberg-starblue, .popu-starblue, .heberg-stargrey {
+        font-size: 10px
+    }
+
+    #popu-tofs {
+        height: 410px
+    }
+
+    .popu-card, .heberg-card, .activ-card {
+        width: 320px;
+        border-radius: 20px
+    }
+
+    .popu-starblue {
+        padding-top: 10px
+    }
+
+    #popu-img1, #popu-img2, #popu-img3 {
+        border-radius: 20px 0 0 20px
+    }
+
+    #hebergements {
+        background-color: white
+    }
+
+    #heberg-tofs {
+        height: 1200px
+    }
+
+    #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
+        height: 110px;
+        border-radius: 20px 20px 0 0
+    }
+
+    #activ {
+        margin-top: 20px;
+    }
+
+    #activ-tofs {
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 1150px
+    }
+
+    .activ-small-tofs {
+        height: 370px
+    }
+
+    .activ-tit {
+        padding: 5px 0 20px 10px;
+        font-size: 16px
+    }
+
+    #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
+        height: 120px;;
+        border-radius: 20px 20px 0 0
+    }
+
+    #activ-img1 {
+        background-position: center top 20%
+    }
+
+    #activ-img2 {
+        background-position: center top 44%
+    }
+
+    #activ-img3 {
+        background-position: center top 28%
+    }
+
+    #activ-img4 {
+        background-position: center top 28%
+    }
+
+    #activ-img5 {
+        background-position: center top 24%
+    }
+
+    #activ-img6 {
+        background-position: center top 30%
     }
 }
 /* FIN DES MEDIA QUERIES "IPHONE 8". */
@@ -574,7 +677,7 @@ footer {
 /* MEDIA QUERIES POUR LES TABLETTES (DIMENSIONS A VOIR : 992px ? 600px ?). */
 /* FIN DES MEDIA QUERIES "TABLETTES". */
 
-/*
+/* UTILISATION DE FLEXBOX
 display: flex;
 
 justify-content: flex-start ==> éléments au côté gauche du conteneur.
