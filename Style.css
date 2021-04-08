@@ -349,7 +349,7 @@ h2 {
 /* PARTIE ACTIVITES. */
 /* Section entière. */
 #activ {
-    margin-top: 50px;
+    margin-top: 50px
 }
 
 /* Conteneur affichant les 6 images, utilisé par flexbox. */
@@ -444,12 +444,12 @@ footer {
 
 /* Concerne spécifiquement le menu "A propos". */
 #footer-apropos {
-    margin-right: 200px
+    margin-right: 18%
 }
 
 /* Concerne spécifiquement le menu "Nos hébergements". */
 #footer-hebergements {
-    margin-right: 260px
+    margin-right: 23%
 }
 
 /* Titres du footer. */
@@ -457,12 +457,21 @@ footer {
     font-size: 16px;
     font-weight: bold
 }
+
+/* Liens du footer. */
+.footer-link:hover {
+    text-decoration: underline
+}
 /* FIN DE LA PARTIE FOOTER. */
 
 /* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
 @media all and (max-width: 375px) {
     header, main {
         padding: 0 14px;
+    }
+
+    nav {
+        padding-top: 20px
     }
     
     nav a:hover {
@@ -509,11 +518,16 @@ footer {
     }
 
     h1 {
+        margin-top: 10px;
         font-size: 22px
     }
 
     p {
         font-size: 16px
+    }
+
+    #search {
+        margin-top: 40px
     }
 
     #search-logo {
@@ -538,6 +552,7 @@ footer {
     }
 
     #filtre {
+        margin-top: 30px;
         font-size: 17px;
     }
 
@@ -578,6 +593,10 @@ footer {
         border-radius: 0
     }
 
+    #populaire {
+        padding-bottom: 40px
+    }
+
     h2 {
         font-size: 22px
     }
@@ -595,7 +614,8 @@ footer {
     }
 
     #popu-tofs {
-        height: 410px
+        margin-top: 30px;
+        height: 440px
     }
 
     .popu-card, .heberg-card, .activ-card {
@@ -608,7 +628,9 @@ footer {
     }
 
     #popu-img1, #popu-img2, #popu-img3 {
-        border-radius: 20px 0 0 20px
+        border-radius: 20px 0 0 20px;
+        height: 130px;
+        width: 120px;
     }
 
     #hebergements {
@@ -631,11 +653,11 @@ footer {
     #activ-tofs {
         flex-wrap: wrap;
         align-content: space-between;
-        height: 1150px
+        height: 1260px
     }
 
     .activ-small-tofs {
-        height: 370px
+        height: 410px
     }
 
     .activ-tit {
@@ -670,6 +692,19 @@ footer {
 
     #activ-img6 {
         background-position: center top 30%
+    }
+
+    footer {
+        padding: 30px 30px;
+        flex-direction: column
+    }
+
+    #footer-apropos, #footer-hebergements {
+        margin: 0
+    }
+
+    .footer-tit {
+        font-size: 18px
     }
 }
 /* FIN DES MEDIA QUERIES "IPHONE 8". */
