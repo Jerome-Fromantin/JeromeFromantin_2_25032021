@@ -86,6 +86,7 @@ input, button {
 /* Concerne spécifiquement le champ de recherche. */
 #search-text {
     width: 205px;
+    border: 1px #F2F2F2 solid
 }
 
 /* Concerne spécifiquement le bouton. */
@@ -349,12 +350,12 @@ h2 {
 /* PARTIE ACTIVITES. */
 /* Section entière. */
 #activ {
-    margin-top: 50px
+    margin: 60px 0 50px 0;
+    width: 100%
 }
 
 /* Conteneur affichant les 6 images, utilisé par flexbox. */
 #activ-tofs {
-    margin: 20px 0 40px 0;
     display: flex;
     justify-content: space-between;
     height: 400px
@@ -378,8 +379,7 @@ h2 {
 #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
     border-radius: 10px 10px 0 0;
     background-position: center;
-    background-size: cover;
-    margin-bottom: 10px
+    background-size: cover
 }
 
 /* Images dans les 2 grandes cartes. */
@@ -464,8 +464,20 @@ footer {
 }
 /* FIN DE LA PARTIE FOOTER. */
 
-/* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8". */
-@media all and (max-width: 375px) {
+/* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8" ET POUR LA VUE "TABLETTES". */
+/*
+2 breakpoints sont utilisés :
+    - 600 px pour la vue "mobile" pour une résolution entre 360 et 600 px, comprenant l'iPhone 8 à 375 px.
+    - 1200 px pour la vue "tablette" pour une résolution entre 601 et 1200 px, comprenant la résolution la
+    plus utilisée "768x1024".
+
+Les media queries sont divisées en 3 groupes :
+    - les règles s'appliquant jusqu'à 600 px de large.
+    - les règles s'appliquant jusqu'à 1200 px de large.
+    - les règles s'appliquant de 601 à 1200 px de large.
+
+*/
+@media all and (max-width: 600px) {
     header, main {
         padding: 0 14px;
     }
@@ -533,6 +545,10 @@ footer {
     #search-logo {
         padding: 16px 20px
     }
+
+    #search-text {
+        width: 190px
+    }
     
     input, button {
         font-size: 17px
@@ -550,7 +566,42 @@ footer {
     #loupe {
         display: block
     }
+    
+    #heberg-pop {
+        margin: 30px -22px 0 -22px
+    }
 
+    #popu-tofs {
+        height: 440px
+    }
+
+    #heberg-tofs {
+        height: 1200px
+    }
+
+    #activ-tofs {
+        height: 1260px
+    }
+
+    .activ-small-tofs {
+        height: 410px
+    }
+
+    footer {
+        padding: 30px 30px;
+        flex-direction: column
+    }
+
+    #footer-apropos, #footer-hebergements {
+        margin: 0
+    }
+
+    .footer-tit {
+        font-size: 18px
+    }
+}
+
+@media all and (max-width: 1200px) {
     #filtre {
         margin-top: 30px;
         font-size: 17px;
@@ -580,7 +631,6 @@ footer {
     }
 
     #heberg-pop {
-        margin: 30px -22px 0 -22px;
         display: flex;
         justify-content: space-between;
         flex-direction: column-reverse;
@@ -615,7 +665,7 @@ footer {
 
     #popu-tofs {
         margin-top: 30px;
-        height: 440px
+        justify-content: center
     }
 
     .popu-card, .heberg-card, .activ-card {
@@ -638,7 +688,7 @@ footer {
     }
 
     #heberg-tofs {
-        height: 1200px
+        justify-content: center
     }
 
     #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
@@ -647,17 +697,13 @@ footer {
     }
 
     #activ {
-        margin-top: 20px;
+        margin: 20px 0 30px 0;
     }
 
     #activ-tofs {
+        justify-content: center;
         flex-wrap: wrap;
-        align-content: space-between;
-        height: 1260px
-    }
-
-    .activ-small-tofs {
-        height: 410px
+        align-content: space-between
     }
 
     .activ-tit {
@@ -693,24 +739,55 @@ footer {
     #activ-img6 {
         background-position: center top 30%
     }
+}
 
-    footer {
-        padding: 30px 30px;
-        flex-direction: column
+@media all and (min-width: 601px) and (max-width: 1200px) {
+    header, main {
+        padding: 0 30px;
     }
 
-    #footer-apropos, #footer-hebergements {
+    #heberg-pop {
+        margin: 30px -38px 0 -38px
+    }
+
+    #popu-tofs {
+        height: auto
+    }
+
+    .popu-card, .heberg-card, .activ-card {
+        margin: 10px 10px
+    }
+
+    #heberg-tofs {
+        height: auto
+    }
+
+    #activ {
+        border: 1px black solid;
+        margin: 0 -10px 30px -10px
+    }
+
+    #activ-tofs {
+        border: 1px red solid;
+        height: auto
+    }
+
+    .activ-small-tofs {
+        padding: 0;
+        border: 1px green solid;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: auto;
+        width: 100vw
+    }
+
+    .activ-card {
         margin: 0
     }
-
-    .footer-tit {
-        font-size: 18px
-    }
 }
-/* FIN DES MEDIA QUERIES "IPHONE 8". */
-
-/* MEDIA QUERIES POUR LES TABLETTES (DIMENSIONS A VOIR : 992px ? 600px ?). */
-/* FIN DES MEDIA QUERIES "TABLETTES". */
+/* FIN DES MEDIA QUERIES. */
 
 /* UTILISATION DE FLEXBOX
 display: flex;
