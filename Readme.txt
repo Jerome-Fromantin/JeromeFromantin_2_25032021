@@ -10,5 +10,6 @@ Travail déjà réalisé :
 - Intégration de la maquette "iPhone 8",
 - Installation du travail sur Git Pages.
 
-Travail à faire :
+Travail en cours :
+- Amélioration de détails de la version "desktop",
 - Intégration de la version "tablette".

@@ -7,23 +7,23 @@ body {
 /* PARTIE HEADER */
 /* "main" est la partie entre "header" et "footer". */
 header, main {
-    padding: 0 45px;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    padding: 0 3.5%
 }
 
 /* Ligne avec le logo et le menu, utilisé par flexbox. */
 nav {
-    padding-top: 30px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    padding-top: 30px
 }
 
 nav a {
     color: #000000;
     text-decoration: none;
+    font-size: 14px;
     padding: 37px 20px;
-    margin-left: 10px;
-    font-size: 14px
+    margin-left: 10px
 }
 nav a:hover {
     color: #0065FC;
@@ -115,6 +115,7 @@ button {
 
 /* Chacun des 4 filtres. */
 .filtres {
+    cursor: pointer;
     font-size: 15px;
     font-weight: bold;
     padding: 12px 15px 12px 0;
@@ -158,16 +159,16 @@ button {
 #blue {
     color: #0065FC;
     padding: 4px 8px;
-    margin-right: 8px;
     border: 1px #F2F2F2 solid;
-    border-radius: 50px
+    border-radius: 50px;
+    margin-right: 8px
 }
 
 /* Conteneur avec "Hébergements" et "Les plus populaires", utilisé par flexbox. */
 #heberg-pop {
-    margin-top: 30px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-top: 30px
 }
 
 /* Chacun des 2 blocs. */
@@ -193,13 +194,18 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;
-    height: 385px
+    height: 380px
 }
 
 /* Lien englobant chaque carte de "Hébergements", "Les plus populaires" et "Activités", ainsi que le footer. */
-.card-link, .footer-link {
+.heberg-link, .popu-link, .activ-link, .footer-link {
     text-decoration: none;
-    color: black;
+    color: black
+}
+
+/* Lien englobant chaque carte de "Hébergements". */
+.heberg-link {
+    width: 31%
 }
 
 /* Chacune des 6 cartes de "Hébergements". */
@@ -208,7 +214,7 @@ h2 {
     border: 4px white solid;
     border-radius: 10px;
     box-shadow:0px 0px 10px #BBBBBB;
-    width: 205px
+    height: 170px
 }
 
 /* Dans chaque carte de "Hébergements" et "Les plus populaires", titre, texte et étoiles bleues. */
@@ -237,10 +243,10 @@ h2 {
 
 /* Images dans chacune des 6 cartes de "Hébergements". */
 #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
-    border-radius: 10px 10px 0 0;
     background-position: center;
     background-size: cover;
     height: 100px;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 10px
 }
 
@@ -298,7 +304,14 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;
-    height: 455px
+    height: 450px
+}
+
+/* Lien englobant chaque carte de "Les plus populaires". */
+.popu-link {
+    width: 100%;
+    height: 27%;
+    margin-bottom: 10px
 }
 
 /* Chacune des 3 cartes, utilisé par flexbox. */
@@ -308,8 +321,10 @@ h2 {
     background-color: white;
     border: 4px white solid;
     border-radius: 10px;
+    margin: 0 auto;
     box-shadow:0px 0px 10px #BBBBBB;
-    width: 285px
+    width: 97%;
+    height: 93%
 }
 
 /* Texte dans chacune de ces 3 cartes. */
@@ -324,11 +339,10 @@ h2 {
 
 /* Images dans chacune des 3 cartes. */
 #popu-img1, #popu-img2, #popu-img3 {
-    border-radius: 10px 0 0 10px;
     background-position: center;
     background-size: cover;
-    height: 120px;
-    width: 110px;
+    border-radius: 10px 0 0 10px;
+    width: 37%
 }
 
 /* Concerne spécifiquement l'image de la carte 1. */
@@ -377,14 +391,14 @@ h2 {
 
 /* Images dans les 6 cartes. */
 #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
-    border-radius: 10px 10px 0 0;
     background-position: center;
-    background-size: cover
+    background-size: cover;
+    border-radius: 10px 10px 0 0
 }
 
 /* Images dans les 2 grandes cartes. */
 #activ-img1, #activ-img4 {
-    height: 340px;
+    height: 340px
 }
 
 /* Concerne spécifiquement l'image de la carte 1. */
@@ -396,14 +410,14 @@ h2 {
 #activ-img2 {
     background-image: url(Images/Activites/Fortdepomegues.jpg);
     background-position: center top 40%;
-    height: 160px;
+    height: 160px
 }
 
 /* Concerne spécifiquement l'image de la carte 3. */
 #activ-img3 {
     background-image: url(Images/Activites/Ilesdufrioul.jpg);
     background-position: center top 15%;
-    height: 100px;
+    height: 100px
 }
 
 /* Concerne spécifiquement l'image de la carte 4. */
@@ -415,14 +429,14 @@ h2 {
 #activ-img5 {
     background-image: url(Images/Activites/Notredamedelagarde.jpg);
     background-position: center top;
-    height: 120px;
+    height: 120px
 }
 
 /* Concerne spécifiquement l'image de la carte 6. */
 #activ-img6 {
     background-image: url(Images/Activites/Parclongchamp.jpg);
     background-position: center top;
-    height: 140px;
+    height: 140px
 }
 
 /* 2 conteneurs affichant chacun 2 petites images, utilisé par flexbox. */
@@ -435,11 +449,11 @@ h2 {
 
 /* PARTIE FOOTER, UTILISE PAR FLEXBOX. */
 footer {
-    padding: 30px 53px;
-    margin: 0 -8px -8px -8px;
-    background-color: #F2F2F2;
     display: flex;
-    justify-content: flex-start
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    padding: 30px 53px;
+    margin: 0 -8px -8px -8px
 }
 
 /* Concerne spécifiquement le menu "A propos". */
@@ -479,7 +493,7 @@ Les media queries sont divisées en 3 groupes :
 */
 @media all and (max-width: 600px) {
     header, main {
-        padding: 0 14px;
+        padding: 0 14px
     }
 
     nav {
@@ -501,13 +515,13 @@ Les media queries sont divisées en 3 groupes :
     }
     
     #lien-inscr {
-        padding-top: 10px;
+        padding-top: 10px
     }
 
     #menu-mobile {
-        margin: 30px -22px 0 -22px;
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
+        margin: 30px -22px 0 -22px
     }
 
     .liens-mobile {
@@ -588,8 +602,8 @@ Les media queries sont divisées en 3 groupes :
     }
 
     footer {
-        padding: 30px 30px;
-        flex-direction: column
+        flex-direction: column;
+        padding: 30px 30px
     }
 
     #footer-apropos, #footer-hebergements {
@@ -604,7 +618,7 @@ Les media queries sont divisées en 3 groupes :
 @media all and (max-width: 1200px) {
     #filtre {
         margin-top: 30px;
-        font-size: 17px;
+        font-size: 17px
     }
 
     #fil-tit {
@@ -619,7 +633,7 @@ Les media queries sont divisées en 3 groupes :
     }
 
     .texte-filtre {
-        padding-left: 12px;
+        padding-left: 12px
     }
 
     #info {
@@ -627,7 +641,7 @@ Les media queries sont divisées en 3 groupes :
     }
 
     #blue {
-        font-size: 13px;
+        font-size: 13px
     }
 
     #heberg-pop {
@@ -664,8 +678,12 @@ Les media queries sont divisées en 3 groupes :
     }
 
     #popu-tofs {
-        margin-top: 30px;
-        justify-content: center
+        justify-content: center;
+        margin-top: 30px
+    }
+
+    .popu-link {
+        width: 328px
     }
 
     .popu-card, .heberg-card, .activ-card {
@@ -679,7 +697,6 @@ Les media queries sont divisées en 3 groupes :
 
     #popu-img1, #popu-img2, #popu-img3 {
         border-radius: 20px 0 0 20px;
-        height: 130px;
         width: 120px;
     }
 
@@ -691,13 +708,21 @@ Les media queries sont divisées en 3 groupes :
         justify-content: center
     }
 
+    .heberg-link {
+        width: 328px
+    }
+
+    .heberg-card {
+        height: 180px
+    }
+
     #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
         height: 110px;
         border-radius: 20px 20px 0 0
     }
 
     #activ {
-        margin: 20px 0 30px 0;
+        width: auto
     }
 
     #activ-tofs {
@@ -712,7 +737,7 @@ Les media queries sont divisées en 3 groupes :
     }
 
     #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
-        height: 120px;;
+        height: 120px;
         border-radius: 20px 20px 0 0
     }
 
@@ -743,48 +768,60 @@ Les media queries sont divisées en 3 groupes :
 
 @media all and (min-width: 601px) and (max-width: 1200px) {
     header, main {
-        padding: 0 30px;
+        padding: 0 30px
     }
 
     #heberg-pop {
         margin: 30px -38px 0 -38px
     }
 
-    #popu-tofs {
+    #popu-tofs, #heberg-tofs, #activ-tofs {
         height: auto
+    }
+
+    .popu-link, .heberg-link, .activ-link {
+        margin: 10px
     }
 
     .popu-card, .heberg-card, .activ-card {
-        margin: 10px 10px
+        margin: 0
+    }
+
+    #hebergements {
+        border: 1px orange solid
     }
 
     #heberg-tofs {
-        height: auto
+        border: 1px black solid
+    }
+
+    .heberg-link {
+        border: 1px green solid
     }
 
     #activ {
-        border: 1px black solid;
-        margin: 0 -10px 30px -10px
+        border: 1px orange solid;
+        padding: 22px;
+        margin: 0 -38px 20px -38px
     }
 
     #activ-tofs {
-        border: 1px red solid;
-        height: auto
+        border: 1px black solid
     }
 
     .activ-small-tofs {
-        padding: 0;
-        border: 1px green solid;
+        border: 1px red solid;
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-between;
+        width: 100vw;
         height: auto;
-        width: 100vw
+        padding: 0
     }
 
-    .activ-card {
-        margin: 0
+    .activ-link {
+        border: 1px green solid
     }
 }
 /* FIN DES MEDIA QUERIES. */

@@ -56,7 +56,7 @@
                 <!-- Ci-dessous, champ de saisie de la ville. Le bouton n'est pas fonctionnel. -->
                 <form method="post" action="#">
                     <div id="search">
-                        <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" id="search-text"><button type="submit" id="search-submit"><span id="rech">Rechercher</span><span id="loupe"><i class="fas fa-search"></i></span></button>
+                        <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" id="search-text"><button type="button" id="search-submit"><span id="rech">Rechercher</span><span id="loupe"><i class="fas fa-search"></i></span></button>
                     </div>
                 </form>
                 <!-- Ci-dessous, les différents filtres applicables. Ils ne sont pas fonctionnels mais ils
@@ -83,7 +83,7 @@
                         <div id="heberg-tofs">
                             <!-- Chaque carte est cliquable dans son intégralité. -->
                             <!-- Les liens sont vides. -->
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img1"></div>
                                     <span class="heberg-tit"><b>Auberge la Cannebière</b></span>
@@ -94,7 +94,7 @@
                                     <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img2"></div>
                                     <span class="heberg-tit"><b>Hôtel du port</b></span>
@@ -104,7 +104,7 @@
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img3"></div>
                                     <span class="heberg-tit"><b>Hôtel Les mouettes</b></span>
@@ -115,7 +115,7 @@
                                     <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img4"></div>
                                     <span class="heberg-tit"><b>Hôtel de la mer</b></span>
@@ -126,7 +126,7 @@
                                     <i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img5"></div>
                                     <span class="heberg-tit"><b>Auberge Le Panier</b></span>
@@ -137,7 +137,7 @@
                                     <span class="heberg-stargrey"><i class="fas fa-star"></i></span>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img6"></div>
                                     <span class="heberg-tit"><b>Hôtel chez Amina</b></span>
@@ -148,14 +148,14 @@
                                 </div>
                             </a>
                         </div>
-                        <p id="more"><a href="#" class="card-link">Afficher plus</a></p>
+                        <p id="more"><a href="#" class="heberg-link">Afficher plus</a></p>
                     </div>
                     <div id="populaire">
                         <!-- "popu-titre" est un conteneur flexbox en "space-between". -->
                         <h2 id="popu-titre">Les plus populaires<i class="fas fa-chart-line"></i></h2>
                         <!-- "popu-tofs" est un conteneur flexbox en "space-between". -->
                         <div id="popu-tofs">
-                            <a href="#" class="card-link">
+                            <a href="#" class="popu-link">
                                 <!-- "popu-card" est un conteneur flexbox en "flex-start". -->
                                 <div class="popu-card">
                                     <div id="popu-img1"></div>
@@ -168,7 +168,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="popu-link">
                                 <div class="popu-card">
                                     <div id="popu-img2"></div>
                                     <div class="popu-card-text">
@@ -181,7 +181,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" class="card-link">
+                            <a href="#" class="popu-link">
                                 <div class="popu-card">
                                     <div id="popu-img3"></div>
                                     <div class="popu-card-text">
@@ -202,7 +202,7 @@
                 <h2>Activités à Marseille</h2>
                 <!-- "activ-tofs" est un conteneur flexbox en "space-between". -->
                 <div id="activ-tofs">
-                    <a href="#" class="card-link">
+                    <a href="#" class="activ-link">
                         <div class="activ-card">
                             <div id="activ-img1"></div>
                             <p class="activ-tit"><b>Vieux Port</b></p>
@@ -210,33 +210,33 @@
                     </a>
                     <!-- "activ-small-tofs" est un conteneur flexbox en "space-between" et "column". -->
                     <div class="activ-small-tofs">
-                        <a href="#" class="card-link">
+                        <a href="#" class="activ-link">
                             <div class="activ-card">
                                 <div id="activ-img2"></div>
                                 <p class="activ-tit"><b>Fort de Pomègues</b></p>
                             </div>
                         </a>
-                        <a href="#" class="card-link">
+                        <a href="#" class="activ-link">
                             <div class="activ-card">
                                 <div id="activ-img3"></div>
                                 <p class="activ-tit"><b>Îles du Frioul</b></p>
                             </div>
                         </a>
                     </div>
-                    <a href="#" class="card-link">
+                    <a href="#" class="activ-link">
                         <div class="activ-card">
                             <div id="activ-img4"></div>
                             <p class="activ-tit"><b>Parc National des Calanques</b></p>
                         </div>
                     </a>
                     <div class="activ-small-tofs">
-                        <a href="#" class="card-link">
+                        <a href="#" class="activ-link">
                             <div class="activ-card">
                                 <div id="activ-img5"></div>
                                 <p class="activ-tit"><b>Notre-Dame-de-la-Garde</b></p>
                             </div>
                         </a>
-                        <a href="#" class="card-link">
+                        <a href="#" class="activ-link">
                             <div class="activ-card">
                                 <div id="activ-img6"></div>
                                 <p class="activ-tit"><b>Parc Longchamp</b></p>
