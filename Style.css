@@ -66,7 +66,9 @@ h1 {
 }
 
 /* Paragraphe de base, utilisé dans cette partie et dans d'autres. */
-p {font-size: 14px}
+p {
+    font-size: 14px
+}
 
 /* Partie grisée à gauche du champ de saisie. */
 #search-logo {
@@ -138,14 +140,14 @@ button {
 
 /* Dans chaque filtre, partie texte. */
 .texte-filtre {
-    padding-left: 15px;
+    padding-left: 15px
 }
 /* FIN DE LA PARTIE RECHERCHE. */
 
 /* PARTIE HEBERGEMENTS, AVEC LES BLOCS "HEBERGEMENTS" ET "LES PLUS POPULAIRES". */
 /* Section entière. */
 #heberg {
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 /* Conteneur avec l'icône "i" et la phrase, utilisé par flexbox. */
@@ -198,7 +200,7 @@ h2 {
 }
 
 /* Lien englobant chaque carte de "Hébergements", "Les plus populaires" et "Activités", ainsi que le footer. */
-.heberg-link, .popu-link, .activ-link, .footer-link {
+.heberg-link, .popu-link, .activ-link-big, .activ-link-small, .footer-link {
     text-decoration: none;
     color: black
 }
@@ -368,11 +370,28 @@ h2 {
     width: 100%
 }
 
-/* Conteneur affichant les 6 images, utilisé par flexbox. */
+/* Conteneur affichant les 6 images (divisées en 4 éléments), utilisé par flexbox. */
 #activ-tofs {
     display: flex;
     justify-content: space-between;
-    height: 400px
+    height: auto
+}
+
+/* Chacun des 4 éléments de "activ-tofs". */
+.activ-link-big, .activ-small-tofs {
+    width: 23%
+}
+
+/* 2 conteneurs affichant chacun 2 petites images, utilisé par flexbox. */
+.activ-small-tofs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column
+}
+
+/* Chacun des 2 éléments de "activ-small-tofs". */
+.activ-link-small {
+    width: 100%
 }
 
 /* Chacune des 6 cartes. */
@@ -380,12 +399,12 @@ h2 {
     background-color: white;
     border-radius: 10px;
     box-shadow:0px 0px 10px #BBBBBB;
-    width: 260px
+    margin-bottom: -12px
 }
 
 /* Titre de chaque carte. */
 .activ-tit {
-    padding: 0 0 15px 10px;
+    padding: 0 0 20px 10px;
     font-size: 14px
 }
 
@@ -398,7 +417,7 @@ h2 {
 
 /* Images dans les 2 grandes cartes. */
 #activ-img1, #activ-img4 {
-    height: 340px
+    height: 390px
 }
 
 /* Concerne spécifiquement l'image de la carte 1. */
@@ -410,14 +429,14 @@ h2 {
 #activ-img2 {
     background-image: url(Images/Activites/Fortdepomegues.jpg);
     background-position: center top 40%;
-    height: 160px
+    height: 180px
 }
 
 /* Concerne spécifiquement l'image de la carte 3. */
 #activ-img3 {
     background-image: url(Images/Activites/Ilesdufrioul.jpg);
     background-position: center top 15%;
-    height: 100px
+    height: 110px
 }
 
 /* Concerne spécifiquement l'image de la carte 4. */
@@ -429,21 +448,14 @@ h2 {
 #activ-img5 {
     background-image: url(Images/Activites/Notredamedelagarde.jpg);
     background-position: center top;
-    height: 120px
+    height: 140px
 }
 
 /* Concerne spécifiquement l'image de la carte 6. */
 #activ-img6 {
     background-image: url(Images/Activites/Parclongchamp.jpg);
     background-position: center top;
-    height: 140px
-}
-
-/* 2 conteneurs affichant chacun 2 petites images, utilisé par flexbox. */
-.activ-small-tofs {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column
+    height: 150px
 }
 /* FIN DE LA PARTIE ACTIVITES. */
 
@@ -477,388 +489,3 @@ footer {
     text-decoration: underline
 }
 /* FIN DE LA PARTIE FOOTER. */
-
-/* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8" ET POUR LA VUE "TABLETTES". */
-/*
-2 breakpoints sont utilisés :
-    - 600 px pour la vue "mobile" pour une résolution entre 360 et 600 px, comprenant l'iPhone 8 à 375 px.
-    - 1200 px pour la vue "tablette" pour une résolution entre 601 et 1200 px, comprenant la résolution la
-    plus utilisée "768x1024".
-
-Les media queries sont divisées en 3 groupes :
-    - les règles s'appliquant jusqu'à 600 px de large.
-    - les règles s'appliquant jusqu'à 1200 px de large.
-    - les règles s'appliquant de 601 à 1200 px de large.
-
-*/
-@media all and (max-width: 600px) {
-    header, main {
-        padding: 0 14px
-    }
-
-    nav {
-        padding-top: 20px
-    }
-    
-    nav a:hover {
-        border-top: none;
-        border-bottom: 2px #0065FC solid
-    }
-
-    #menu a {
-        font-size: 16px;
-        padding: 0 0 10px 0
-    }
-
-    #ancres-heberg-activ {
-        display: none
-    }
-    
-    #lien-inscr {
-        padding-top: 10px
-    }
-
-    #menu-mobile {
-        display: flex;
-        justify-content: space-between;
-        margin: 30px -22px 0 -22px
-    }
-
-    .liens-mobile {
-        width: 50%;
-        text-align: center;
-        padding-bottom: 15px;
-        border-bottom: 2px #F2F2F2 solid
-    }
-    .liens-mobile:hover {
-        border-bottom: 2px #0065FC solid
-    }
-    
-    .liens-mobile a {
-        color: #000000;
-        text-decoration: none;
-        font-size: 16px
-    }
-    .liens-mobile a:hover {
-        color: #0065FC
-    }
-
-    h1 {
-        margin-top: 10px;
-        font-size: 22px
-    }
-
-    p {
-        font-size: 16px
-    }
-
-    #search {
-        margin-top: 40px
-    }
-
-    #search-logo {
-        padding: 16px 20px
-    }
-
-    #search-text {
-        width: 190px
-    }
-    
-    input, button {
-        font-size: 17px
-    }
-    
-    button {
-        border-radius: 15px;
-        margin-left: -10px
-    }
-    
-    #rech {
-        display: none
-    }
-    
-    #loupe {
-        display: block
-    }
-    
-    #heberg-pop {
-        margin: 30px -22px 0 -22px
-    }
-
-    #popu-tofs {
-        height: 440px
-    }
-
-    #heberg-tofs {
-        height: 1200px
-    }
-
-    #activ-tofs {
-        height: 1260px
-    }
-
-    .activ-small-tofs {
-        height: 410px
-    }
-
-    footer {
-        flex-direction: column;
-        padding: 30px 30px
-    }
-
-    #footer-apropos, #footer-hebergements {
-        margin: 0
-    }
-
-    .footer-tit {
-        font-size: 18px
-    }
-}
-
-@media all and (max-width: 1200px) {
-    #filtre {
-        margin-top: 30px;
-        font-size: 17px
-    }
-
-    #fil-tit {
-        display: block
-    }
-
-    .filtres {
-        display: inline-block;
-        font-size: 16px;
-        padding: 0 12px 0 0;
-        margin: 15px 8px 0 0
-    }
-
-    .texte-filtre {
-        padding-left: 12px
-    }
-
-    #info {
-        align-items: flex-start
-    }
-
-    #blue {
-        font-size: 13px
-    }
-
-    #heberg-pop {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        width: 100vw
-    }
-
-    #populaire, #hebergements {
-        width: auto;
-        padding: 22px;
-        border-radius: 0
-    }
-
-    #populaire {
-        padding-bottom: 40px
-    }
-
-    h2 {
-        font-size: 22px
-    }
-
-    .heberg-tit, .popu-tit {
-        font-size: 16px
-    }
-
-    .heberg-tex, .popu-tex {
-        font-size: 14px
-    }
-
-    .heberg-starblue, .popu-starblue, .heberg-stargrey {
-        font-size: 10px
-    }
-
-    #popu-tofs {
-        justify-content: center;
-        margin-top: 30px
-    }
-
-    .popu-link {
-        width: 328px
-    }
-
-    .popu-card, .heberg-card, .activ-card {
-        width: 320px;
-        border-radius: 20px
-    }
-
-    .popu-starblue {
-        padding-top: 10px
-    }
-
-    #popu-img1, #popu-img2, #popu-img3 {
-        border-radius: 20px 0 0 20px;
-        width: 120px;
-    }
-
-    #hebergements {
-        background-color: white
-    }
-
-    #heberg-tofs {
-        justify-content: center
-    }
-
-    .heberg-link {
-        width: 328px
-    }
-
-    .heberg-card {
-        height: 180px
-    }
-
-    #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
-        height: 110px;
-        border-radius: 20px 20px 0 0
-    }
-
-    #activ {
-        width: auto
-    }
-
-    #activ-tofs {
-        justify-content: center;
-        flex-wrap: wrap;
-        align-content: space-between
-    }
-
-    .activ-tit {
-        padding: 5px 0 20px 10px;
-        font-size: 16px
-    }
-
-    #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
-        height: 120px;
-        border-radius: 20px 20px 0 0
-    }
-
-    #activ-img1 {
-        background-position: center top 20%
-    }
-
-    #activ-img2 {
-        background-position: center top 44%
-    }
-
-    #activ-img3 {
-        background-position: center top 28%
-    }
-
-    #activ-img4 {
-        background-position: center top 28%
-    }
-
-    #activ-img5 {
-        background-position: center top 24%
-    }
-
-    #activ-img6 {
-        background-position: center top 30%
-    }
-}
-
-@media all and (min-width: 601px) and (max-width: 1200px) {
-    header, main {
-        padding: 0 30px
-    }
-
-    #heberg-pop {
-        margin: 30px -38px 0 -38px
-    }
-
-    #popu-tofs, #heberg-tofs, #activ-tofs {
-        height: auto
-    }
-
-    .popu-link, .heberg-link, .activ-link {
-        margin: 10px
-    }
-
-    .popu-card, .heberg-card, .activ-card {
-        margin: 0
-    }
-
-    #hebergements {
-        border: 1px orange solid
-    }
-
-    #heberg-tofs {
-        border: 1px black solid
-    }
-
-    .heberg-link {
-        border: 1px green solid
-    }
-
-    #activ {
-        border: 1px orange solid;
-        padding: 22px;
-        margin: 0 -38px 20px -38px
-    }
-
-    #activ-tofs {
-        border: 1px black solid
-    }
-
-    .activ-small-tofs {
-        border: 1px red solid;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: space-between;
-        width: 100vw;
-        height: auto;
-        padding: 0
-    }
-
-    .activ-link {
-        border: 1px green solid
-    }
-}
-/* FIN DES MEDIA QUERIES. */
-
-/* UTILISATION DE FLEXBOX
-display: flex;
-
-justify-content: flex-start ==> éléments au côté gauche du conteneur.
-justify-content: flex-end ==> éléments au côté droit du conteneur.
-justify-content: center ==> éléments au centre du conteneur.
-justify-content: space-between ==> éléments avec un espace égal entre eux.
-justify-content: space-around ==> éléments avec un espace égal autour d'eux.
-
-align-items: flex-start ==> éléments en haut du conteneur.
-align-items: flex-end ==> éléments en bas du conteneur.
-align-items: center ==> éléments au centre vertical du conteneur.
-align-items: baseline ==> éléments à la ligne de base du conteneur.
-align-items: stretch ==> éléments étirés pour s'adapter au conteneur.
-
-flex-direction: row ==> éléments dans la même direction que le texte.
-flex-direction: row-reverse ==> éléments dans la direction opposée au texte.
-flex-direction: column ==> éléments de haut en bas.
-flex-direction: column-reverse ==> éléments de bas en haut.
-
-order: -1/0/1 ==> modifie l'ordre d'un élément individuel, valeur par défaut à 0.
-align-self: <comme align-items> ==> aligne verticalement un élément individuel.
-
-flex-wrap: nowrap ==> éléments sur une seule ligne.
-flex-wrap: wrap ==> éléments sur plusieurs lignes si besoin.
-flex-wrap: wrap-reverse ==> éléments sur plusieurs lignes si besoin, ordre inversé.
-
-flex-flow combine flex-direction et flex-wrap. Ex : flex-flow: row wrap
-
-align-content: flex-start ==> lignes en haut du conteneur.
-align-content: flex-end ==> lignes en bas du conteneur.
-align-content: center ==> lignes au centre vertical du conteneur.
-align-content: space-between ==> lignes avec un espace égal entre elles.
-align-content: space-around ==> lignes avec un espace égal autour d'elles.
-align-content: stretch ==> lignes étirées pour s'adapter au conteneur.
-*/

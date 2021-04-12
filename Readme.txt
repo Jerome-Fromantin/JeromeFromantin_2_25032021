@@ -8,8 +8,8 @@ Il faut de plus réaliser l'intégration pour les écrans de type tablette.
 Travail déjà réalisé :
 - Intégration de la maquette "dektop",
 - Intégration de la maquette "iPhone 8",
+- Intégration de la version "tablette",
 - Installation du travail sur Git Pages.
 
-Travail en cours :
-- Amélioration de détails de la version "desktop",
-- Intégration de la version "tablette".
+Travail éventuellement à faire :
+- Amélioration de détails dans les différentes versions.

@@ -1,0 +1,351 @@
+/* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8" ET POUR LA VUE "TABLETTES". */
+/*
+3 breakpoints sont utilisés :
+    - 600 px pour la vue "mobile" pour une résolution entre 360 et 600 px, comprenant l'iPhone 8 à 375 px.
+    - 1200 px pour la vue "tablette" pour une résolution entre 601 et 1200 px, comprenant la résolution la
+    plus utilisée "768x1024".
+    - 1064 px pour un élément particulier de la vue "tablette".
+
+Les media queries sont divisées en 4 groupes :
+    - les règles s'appliquant jusqu'à 600 px de large.
+    - les règles s'appliquant jusqu'à 1200 px de large.
+    - les règles s'appliquant de 601 à 1200 px de large.
+    - les règles s'appliquant de 1064 à 1200 px de large.
+
+*/
+@media all and (max-width: 600px) {
+    header, main {
+        padding: 0 14px
+    }
+
+    nav {
+        padding-top: 20px
+    }
+    
+    nav a:hover {
+        border-top: none;
+        border-bottom: 2px #0065FC solid
+    }
+
+    #menu a {
+        font-size: 16px;
+        padding: 0 0 10px 0
+    }
+
+    #ancres-heberg-activ {
+        display: none
+    }
+    
+    #lien-inscr {
+        padding-top: 10px
+    }
+
+    #menu-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px -22px 0 -22px
+    }
+
+    .liens-mobile {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 2px #F2F2F2 solid
+    }
+    .liens-mobile:hover {
+        border-bottom: 2px #0065FC solid
+    }
+    
+    .liens-mobile a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 16px
+    }
+    .liens-mobile a:hover {
+        color: #0065FC
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 22px
+    }
+
+    p {
+        font-size: 16px
+    }
+
+    #search {
+        margin-top: 40px
+    }
+
+    #search-logo {
+        padding: 16px 20px
+    }
+
+    #search-text {
+        width: 190px
+    }
+    
+    input, button {
+        font-size: 17px
+    }
+    
+    button {
+        border-radius: 15px;
+        margin-left: -10px
+    }
+    
+    #rech {
+        display: none
+    }
+    
+    #loupe {
+        display: block
+    }
+    
+    #heberg-pop {
+        margin: 30px -22px 0 -22px
+    }
+
+    #popu-tofs {
+        height: 440px
+    }
+
+    #heberg-tofs {
+        height: 1300px
+    }
+
+    #activ-tofs {
+        height: 1260px
+    }
+
+    .activ-link-big, .activ-small-tofs {
+        width: 100%
+    }
+
+    .activ-small-tofs {
+        height: 400px
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 30px 30px
+    }
+
+    #footer-apropos, #footer-hebergements {
+        margin: 0
+    }
+
+    .footer-tit {
+        font-size: 18px
+    }
+}
+
+@media all and (max-width: 1200px) {
+    #filtre {
+        margin-top: 30px;
+        font-size: 17px
+    }
+
+    #fil-tit {
+        display: block
+    }
+
+    .filtres {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0 12px 0 0;
+        margin: 15px 8px 0 0
+    }
+
+    .texte-filtre {
+        padding-left: 12px
+    }
+
+    #info {
+        align-items: flex-start
+    }
+
+    #blue {
+        font-size: 13px
+    }
+
+    #heberg-pop {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        width: 100vw
+    }
+
+    #populaire, #hebergements {
+        width: auto;
+        padding: 22px;
+        border-radius: 0
+    }
+
+    #populaire {
+        padding-bottom: 40px
+    }
+
+    h2 {
+        font-size: 22px
+    }
+
+    .heberg-tit, .popu-tit {
+        font-size: 16px
+    }
+
+    .heberg-tex, .popu-tex {
+        font-size: 14px
+    }
+
+    .heberg-starblue, .popu-starblue, .heberg-stargrey {
+        font-size: 10px
+    }
+
+    #popu-tofs {
+        justify-content: center;
+        margin-top: 30px
+    }
+
+    .popu-link {
+        width: 328px
+    }
+
+    .popu-card, .heberg-card, .activ-card {
+        width: 320px;
+        border-radius: 20px
+    }
+
+    .popu-starblue {
+        padding-top: 10px
+    }
+
+    #popu-img1, #popu-img2, #popu-img3 {
+        border-radius: 20px 0 0 20px;
+        width: 120px;
+    }
+
+    #hebergements {
+        background-color: white
+    }
+
+    #heberg-tofs {
+        justify-content: center
+    }
+
+    .heberg-link {
+        width: 328px
+    }
+
+    .heberg-card {
+        height: 180px
+    }
+
+    #heberg-img1, #heberg-img2, #heberg-img3, #heberg-img4, #heberg-img5, #heberg-img6 {
+        height: 110px;
+        border-radius: 20px 20px 0 0
+    }
+
+    #activ {
+        margin-top: 20px;
+        width: auto
+    }
+
+    #activ-tofs {
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: space-between
+    }
+
+    .activ-link-big, .activ-small-tofs, .activ-link-small {
+        width: 320px
+    }
+
+    .activ-tit {
+        padding: 5px 0 20px 10px;
+        font-size: 16px
+    }
+
+    #activ-img1, #activ-img2, #activ-img3, #activ-img4, #activ-img5, #activ-img6 {
+        height: 120px;
+        border-radius: 20px 20px 0 0
+    }
+
+    #activ-img1 {
+        background-position: center top 20%
+    }
+
+    #activ-img2 {
+        background-position: center top 44%
+    }
+
+    #activ-img3 {
+        background-position: center top 28%
+    }
+
+    #activ-img4 {
+        background-position: center top 28%
+    }
+
+    #activ-img5 {
+        background-position: center top 24%
+    }
+
+    #activ-img6 {
+        background-position: center top 30%
+    }
+}
+
+@media all and (min-width: 601px) and (max-width: 1200px) {
+    header, main {
+        padding: 0 30px
+    }
+
+    #heberg-pop {
+        margin: 30px -38px 0 -38px
+    }
+
+    #popu-tofs, #heberg-tofs, #activ-tofs {
+        height: auto
+    }
+
+    .popu-link, .heberg-link, .activ-link-big, .activ-link-small {
+        margin: 10px
+    }
+
+    .popu-card, .heberg-card, .activ-card {
+        margin: 0
+    }
+
+    #activ {
+        padding: 22px;
+        margin: -20px -38px 20px -38px
+    }
+
+    #activ-tofs {
+        justify-content: space-around
+    }
+
+    .activ-small-tofs {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0
+    }
+    
+    .activ-card {
+        margin-bottom: -14px
+    }
+
+    @media all and (min-width: 1064px) and (max-width: 1200px) {
+        .activ-small-tofs {
+            flex-wrap: nowrap;
+            width: 66%
+        }
+    }
+}
