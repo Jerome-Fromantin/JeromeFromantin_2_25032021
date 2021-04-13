@@ -102,6 +102,9 @@ button {
     text-align: center;
     color: white
 }
+button:focus {
+    outline: 0
+}
 
 /* Concerne spécifiquement l'icône qui n'apparaît qu'en vue iPhone 8. */
 #loupe {
