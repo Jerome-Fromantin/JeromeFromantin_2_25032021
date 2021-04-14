@@ -11,5 +11,4 @@ Travail déjà réalisé :
 - Intégration de la version "tablette",
 - Installation du travail sur Git Pages.
 
-Travail éventuellement à faire :
-- Amélioration de détails dans les différentes versions.
+Ce projet est désormais terminé.

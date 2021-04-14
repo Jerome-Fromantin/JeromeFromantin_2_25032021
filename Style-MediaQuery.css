@@ -1,18 +1,20 @@
 /* MEDIA QUERIES POUR LA MAQUETTE "IPHONE 8" ET POUR LA VUE "TABLETTES". */
 /*
-3 breakpoints sont utilisés :
+4 breakpoints sont utilisés :
     - 600 px pour la vue "mobile" pour une résolution entre 360 et 600 px, comprenant l'iPhone 8 à 375 px.
     - 1200 px pour la vue "tablette" pour une résolution entre 601 et 1200 px, comprenant la résolution la
     plus utilisée "768x1024".
-    - 1064 px pour un élément particulier de la vue "tablette".
+    - 688 px et 1048 px pour des éléments particuliers de la vue "tablette".
 
-Les media queries sont divisées en 4 groupes :
+Les media queries sont divisées en 5 groupes :
     - les règles s'appliquant jusqu'à 600 px de large.
     - les règles s'appliquant jusqu'à 1200 px de large.
     - les règles s'appliquant de 601 à 1200 px de large.
-    - les règles s'appliquant de 1064 à 1200 px de large.
+    - les règles s'appliquant de 688 à 1200 px de large.
+    - les règles s'appliquant de 1048 à 1200 px de large.
 
 */
+
 @media all and (max-width: 600px) {
     header, main {
         padding: 0 14px
@@ -119,6 +121,10 @@ Les media queries sont divisées en 4 groupes :
         height: 1260px
     }
 
+    .activ-link-big, .activ-small-tofs, .activ-link-small {
+        max-width: 400px
+    }
+
     .activ-link-big, .activ-small-tofs {
         width: 100%
     }
@@ -184,7 +190,8 @@ Les media queries sont divisées en 4 groupes :
     }
 
     #populaire {
-        padding-bottom: 40px
+        padding-bottom: 40px;
+        margin-right: -8px
     }
 
     h2 {
@@ -209,11 +216,11 @@ Les media queries sont divisées en 4 groupes :
     }
 
     .popu-link {
-        width: 328px
+        max-width: 400px
     }
 
     .popu-card, .heberg-card, .activ-card {
-        width: 320px;
+        width: 100%;
         border-radius: 20px
     }
 
@@ -235,7 +242,8 @@ Les media queries sont divisées en 4 groupes :
     }
 
     .heberg-link {
-        width: 328px
+        max-width: 400px;
+        width: 100%;
     }
 
     .heberg-card {
@@ -256,10 +264,6 @@ Les media queries sont divisées en 4 groupes :
         justify-content: center;
         flex-wrap: wrap;
         align-content: space-between
-    }
-
-    .activ-link-big, .activ-small-tofs, .activ-link-small {
-        width: 320px
     }
 
     .activ-tit {
@@ -295,6 +299,10 @@ Les media queries sont divisées en 4 groupes :
     #activ-img6 {
         background-position: center top 30%
     }
+
+    footer {
+        margin-right: -8px
+    }
 }
 
 @media all and (min-width: 601px) and (max-width: 1200px) {
@@ -327,12 +335,21 @@ Les media queries sont divisées en 4 groupes :
         justify-content: space-around
     }
 
+    .activ-link-big {
+        width: 30%;
+        min-width: 320px
+    }
+
+    .activ-link-small {
+        min-width: 320px
+    }
+
     .activ-small-tofs {
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-between;
-        width: auto;
+        width: 320px;
         height: auto;
         padding: 0;
         margin: 0
@@ -342,10 +359,21 @@ Les media queries sont divisées en 4 groupes :
         margin-bottom: -14px
     }
 
-    @media all and (min-width: 1064px) and (max-width: 1200px) {
+    @media all and (min-width: 688px) and (max-width: 1200px) {
         .activ-small-tofs {
             flex-wrap: nowrap;
-            width: 66%
+            width: 100%;
+            max-width: 680px
+        }
+    }
+
+    @media all and (min-width: 1048px) and (max-width: 1200px) {
+        .activ-link-big {
+            width: 33%
+        }
+        .activ-small-tofs {
+            width: 65%;
+            max-width: none
         }
     }
 }
