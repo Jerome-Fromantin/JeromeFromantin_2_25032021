@@ -4,13 +4,15 @@
         <meta charset="utf-8">
         <title>Reservia</title>
         <meta name="description" content='Projet de formation "OpenClassrooms" - Intégration de maquette.'>
-        <meta name="keywords" content="OpenClassrooms, intégration, maquette, HTML, CSS, responsive">
+        <meta name="keywords" content="OpenClassrooms, intégration, maquette, iPhone 8,
+        tablette, desktop, HTML, CSS, flexbox, responsive">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jérôme Fromantin">
         <link rel="stylesheet" href="Style.css">
         <link rel="stylesheet" href="Style-MediaQuery.css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
         <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+        <!-- Caractères spéciaux : À Â Ç È É Ê Ë Î Ô Œ œ ► … «» — -->
     </head>
 
     <body>
@@ -50,12 +52,11 @@
                         <i class="fas fa-map-marker-alt" id="search-logo"></i><input type="text" id="search-text"><button type="button" id="search-submit"><span id="rech">Rechercher</span><span id="loupe"><i class="fas fa-search"></i></span></button>
                     </div>
                 </form>
-                <!-- Ci-dessous, les différents filtres applicables. Ils ne sont pas fonctionnels mais ils
-                changent d'apparence au survol. -->
+                <!-- Ci-dessous, les différents filtres applicables. Ils ne sont pas fonctionnels mais ils changent d'apparence au survol. -->
                 <p id="filtre">
                     <span id="fil-tit">Filtres</span>
                     <span class="filtres"><i class="fas fa-money-bill-wave blue"></i><span class="texte-filtre">Économique</span></span>
-                    <span class="filtres"><i class="fas fa-child blue"></i><span class="texte-filtre">Familial</span></span>
+                    <span class="filtres"><i class="fas fa-child blue" id="familial"></i><span class="texte-filtre">Familial</span></span>
                     <span class="filtres"><i class="fas fa-heart blue"></i><span class="texte-filtre">Romantique</span></span>
                     <span class="filtres"><i class="fas fa-dog blue"></i><span class="texte-filtre">Animaux autorisés</span></span>
                 </p>
@@ -77,7 +78,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img1"></div>
-                                    <span class="heberg-tit"><b>Auberge la Cannebière</b></span>
+                                    <span class="heberg-tit">Auberge la Cannebière</span>
                                     <br><span class="heberg-tex">Nuit à partir de <b>25€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i>
@@ -88,7 +89,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img2"></div>
-                                    <span class="heberg-tit"><b>Hôtel du port</b></span>
+                                    <span class="heberg-tit">Hôtel du port</span>
                                     <br><span class="heberg-tex">Nuit à partir de 52<b>€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i>
@@ -98,7 +99,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img3"></div>
-                                    <span class="heberg-tit"><b>Hôtel Les mouettes</b></span>
+                                    <span class="heberg-tit">Hôtel Les mouettes</span>
                                     <br><span class="heberg-tex">Nuit à partir de 76<b>€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i>
@@ -109,7 +110,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img4"></div>
-                                    <span class="heberg-tit"><b>Hôtel de la mer</b></span>
+                                    <span class="heberg-tit">Hôtel de la mer</span>
                                     <br><span class="heberg-tex">Nuit à partir de 46<b>€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
@@ -120,7 +121,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img5"></div>
-                                    <span class="heberg-tit"><b>Auberge Le Panier</b></span>
+                                    <span class="heberg-tit">Auberge Le Panier</span>
                                     <br><span class="heberg-tex">Nuit à partir de <b>23€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i>
@@ -131,7 +132,7 @@
                             <a href="#" class="heberg-link">
                                 <div class="heberg-card">
                                     <div id="heberg-img6"></div>
-                                    <span class="heberg-tit"><b>Hôtel chez Amina</b></span>
+                                    <span class="heberg-tit">Hôtel chez Amina</span>
                                     <br><span class="heberg-tex">Nuit à partir de 96<b>€</b></span>
                                     <br><span class="heberg-starblue"><i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i> <i class="fas fa-star"></i>
@@ -196,7 +197,7 @@
                     <a href="#" class="activ-link-big">
                         <div class="activ-card">
                             <div id="activ-img1"></div>
-                            <p class="activ-tit"><b>Vieux Port</b></p>
+                            <p class="activ-tit">Vieux Port</p>
                         </div>
                     </a>
                     <!-- "activ-small-tofs" est un conteneur flexbox en "space-between" et "column". -->
@@ -204,33 +205,33 @@
                         <a href="#" class="activ-link-small">
                             <div class="activ-card">
                                 <div id="activ-img2"></div>
-                                <p class="activ-tit"><b>Fort de Pomègues</b></p>
+                                <p class="activ-tit">Fort de Pomègues</p>
                             </div>
                         </a>
                         <a href="#" class="activ-link-small">
                             <div class="activ-card">
                                 <div id="activ-img3"></div>
-                                <p class="activ-tit"><b>Îles du Frioul</b></p>
+                                <p class="activ-tit">Îles du Frioul</p>
                             </div>
                         </a>
                     </div>
                     <a href="#" class="activ-link-big">
                         <div class="activ-card">
                             <div id="activ-img4"></div>
-                            <p class="activ-tit"><b>Parc National des Calanques</b></p>
+                            <p class="activ-tit">Parc National des Calanques</p>
                         </div>
                     </a>
                     <div class="activ-small-tofs">
                         <a href="#" class="activ-link-small">
                             <div class="activ-card">
                                 <div id="activ-img5"></div>
-                                <p class="activ-tit"><b>Notre-Dame-de-la-Garde</b></p>
+                                <p class="activ-tit">Notre-Dame-de-la-Garde</p>
                             </div>
                         </a>
                         <a href="#" class="activ-link-small">
                             <div class="activ-card">
                                 <div id="activ-img6"></div>
-                                <p class="activ-tit"><b>Parc Longchamp</b></p>
+                                <p class="activ-tit">Parc Longchamp</p>
                             </div>
                         </a>
                     </div>

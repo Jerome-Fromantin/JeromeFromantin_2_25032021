@@ -55,7 +55,7 @@ Les media queries sont divisées en 5 groupes :
         border-bottom: 2px #F2F2F2 solid
     }
     .liens-mobile:hover {
-        border-bottom: 2px #0065FC solid
+        border-bottom-color: #0065FC
     }
     
     .liens-mobile a {
@@ -198,15 +198,15 @@ Les media queries sont divisées en 5 groupes :
         font-size: 22px
     }
 
-    .heberg-tit, .popu-tit {
+    .popu-tit, .heberg-tit {
         font-size: 16px
     }
 
-    .heberg-tex, .popu-tex {
+    .popu-tex, .heberg-tex {
         font-size: 14px
     }
 
-    .heberg-starblue, .popu-starblue, .heberg-stargrey {
+    .popu-starblue, .heberg-starblue, .heberg-stargrey {
         font-size: 10px
     }
 
@@ -358,22 +358,22 @@ Les media queries sont divisées en 5 groupes :
     .activ-card {
         margin-bottom: -14px
     }
+}
 
-    @media all and (min-width: 688px) and (max-width: 1200px) {
-        .activ-small-tofs {
-            flex-wrap: nowrap;
-            width: 100%;
-            max-width: 680px
-        }
+@media all and (min-width: 688px) and (max-width: 1200px) {
+    .activ-small-tofs {
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 680px
     }
+}
 
-    @media all and (min-width: 1048px) and (max-width: 1200px) {
-        .activ-link-big {
-            width: 33%
-        }
-        .activ-small-tofs {
-            width: 65%;
-            max-width: none
-        }
+@media all and (min-width: 1048px) and (max-width: 1200px) {
+    .activ-link-big {
+        width: 33%
+    }
+    .activ-small-tofs {
+        width: 65%;
+        max-width: none
     }
 }

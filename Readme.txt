@@ -5,10 +5,10 @@ Le projet 01 était un simple travail d'organisation personnelle de l'apprentissa
 Ce projet 02 consiste en l'intégration d'une maquette "desktop" et de la maquette correspondante pour iPhone 8.
 Il faut de plus réaliser l'intégration pour les écrans de type tablette.
 
-Travail déjà réalisé :
+Travail réalisé :
 - Intégration de la maquette "dektop",
 - Intégration de la maquette "iPhone 8",
 - Intégration de la version "tablette",
 - Installation du travail sur Git Pages.
 
-Ce projet est désormais terminé.
+Ce projet est désormais terminé mais peut éventuellement être amélioré.
